@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Torodd F. Ottestad"
-  site-url: https://lektorodd.github.io
+  site-url: https://lektorodd.no
   description: "Lagring for tankar, utprøvingar og løysingsforslag. Det meste er pythonrelatert i større eller mindre grad."
   navbar:
     left:
@@ -25,14 +25,11 @@ website:
     right:
    
       - icon: github
-        href: https://github.com/lektorodd/lektorodd.github.io
+        href: https://github.com/lektorodd/lektorodd.no
       - icon: youtube
         href: https://www.youtube.com/channel/UCWfDrIj3Mq3Niz77HJ6cTNg
       - icon: rss-fill
         href: index.xml
-  google-analytics:
-    tracking-id: "G-744F7V6HLG"
-    anonymize-ip: true
 
 format:
   html:
@@ -45,7 +42,7 @@ execute:
   freeze: auto  
 comments:
   giscus:
-    repo: lektorodd/lektorodd.github.io
+    repo: lektorodd/lektorodd.no
 
 
 

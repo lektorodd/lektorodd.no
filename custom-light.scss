@@ -152,6 +152,10 @@ $callout-color-important: #e74c3c; // Rød for viktige meldinger.
     color: $navbar-fg;
 }
 
+.quarto-title h1 {
+  font-family: $font-family-monospace;
+}
+
 .framsideboks {
     display: flex;
     align-items: center;
@@ -211,29 +215,3 @@ $callout-color-important: #e74c3c; // Rød for viktige meldinger.
     font-size: 60px; // Juster ikonstørrelsen.
   }
 
-  .velkomst {
-    padding: 4%;
-    border-color: $navbar-bg;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 1em;
-    margin-bottom: 2em;
-  }
-  .velkomst { 
-    h1, p {
-    font-family: $font-family-monospace;
-    }
-  }
-
-  .velkomst h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-
-    @media (max-width: 768px) {
-      font-size: 2em;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1.25em;
-    }
-  }

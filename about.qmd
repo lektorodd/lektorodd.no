@@ -7,7 +7,7 @@ about:
   links:
     - icon: envelope
       text: e-post
-      href: mailto:torodd@hey.com
+      href: mailto:post@lektorodd.no
     - icon: github
       text: Github
       href: https://github.com/lektorodd
@@ -24,7 +24,7 @@ comments: false
 ---
 
 
-Torodd her 👋 Eg jobbar som lektor i vidaregåande skule. Underviser i matematikk, geofag og geografi. Interessert i teknologibruk i skulen, og spesielt programmering (så interessert at eg har skrive [masteroppgåve](https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/2766052) i emnet :sweat_smile:) og kunstig intelligens 🤖. 
+Torodd her 👋 Eg jobbar som lektor i vidaregåande skule. Underviser i matematikk, teknologi og forskingslære, geofag og geografi. Interessert i teknologibruk i skulen, og spesielt programmering (så interessert at eg har skrive [masteroppgåve](https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/2766052) i emnet :sweat_smile:) og kunstig intelligens 🤖. 
 
 Jobbar stadig med å utvikla den profesjonsfaglege digitale kompetansen ([PfDK](https://www.udir.no/kvalitet-og-kompetanse/profesjonsfaglig-digital-kompetanse/rammeverk-larerens-profesjonsfaglige-digitale-komp/innledning/#go-to-top-target)), så denne bloggen er ein del av dette... Kjekt å både få tenkt litt på korleis programmering kan brukast i skulen, og læra meg noko nytt ([Quarto](https://quarto.org/)) 😊
 
