@@ -1,12 +1,12 @@
 ---
-title: "Eksamen H24 2P-Y"
+title: "H24 // 2P-Y"
 from: markdown+emoji
 author: "Torodd F. Ottestad"
 date: "2024-12-01"
 categories: [2P-Y, H24, eksamen]
 ---
 
-# Løysingsforslag 2P-Y - H24 
+# Løysingsforslag 2P-Y - hausten 2024 
 
 Her er eit forslag til løysing av hausteksamen i 2P-Y 2024.
 
@@ -355,11 +355,11 @@ Bruker CAS
 
 #### c) Gjennomsnittleg auke frå dag 1 til 60
 
-Bruker CAS. Finn dei to verdiane og vekstfaktor for heile perioden. For å finna dagleg vekstfaktor finn eg 60-te rota av den totale vekstfaktoren.
+Bruker CAS. Finn gjennomsnittleg auke. Deler endring i tid med endring i dagar.
 
 ![📷 CAS](img/6c.png){width="45%"}
 
-**Gjennomsnittleg auke per dag frå dag 1 til 60 er omlag 2,3 %.**
+**Gjennomsnittleg auke per dag frå dag 1 til 60 er omlag 0,5 min.**
 
 
 ### Oppgåve 7
