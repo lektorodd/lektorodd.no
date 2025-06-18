@@ -30,6 +30,10 @@ website:
         href: https://www.youtube.com/channel/UCWfDrIj3Mq3Niz77HJ6cTNg
       - icon: rss-fill
         href: index.xml
+  google-analytics:
+    tracking-id: "G-4BT5GQPJNJ"
+    storage: none
+    anonymize-ip: true
 
 format:
   html:
@@ -37,7 +41,9 @@ format:
       light: [journal, custom-light.scss]
       dark: [journal, custom-dark.scss]
     code-line-numbers: true
-      
+
+
+  
 execute:
   freeze: auto  
 comments:
