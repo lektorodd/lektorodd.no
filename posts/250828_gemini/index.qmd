@@ -1,5 +1,6 @@
 ---
 title: "Google Gemini og Canvas"
+description: "Tips og erfaringar rundt Gemini og Canvas. Applaging til folket..."
 from: markdown+emoji
 author: "Torodd F. Ottestad"
 date: "2025-08-28"
