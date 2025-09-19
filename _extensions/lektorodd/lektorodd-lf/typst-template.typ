@@ -1,4 +1,3 @@
-
 // This is an example typst template (based on the default template that ships
 // with Quarto). It defines a typst function named 'article' which provides
 // various customization options. This function is called from the 
@@ -10,7 +9,6 @@
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
 
-
 #let lf(
   title: "Løysingsforslag",
   subtitle: none,
@@ -19,12 +17,12 @@
   abstract: none,
   abstract-title: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
+  margin: (x: 1in, y: 1in),
   paper: "a4",
   lang: "no",
   region: "NO",
   font: "Inter",
-  fontsize: 12pt,
+  fontsize: 11pt,
   title-size: 1.5em,
   subtitle-size: 1.25em,
   heading-family: "Inter",
@@ -45,13 +43,13 @@
       #box(
         fill: rgb("#3D5A80"),
         width: 100%,
-        height: 7%,
+        height: 6%,
       )
     ],
     header: [
-      #set text(font: "JetBrains Mono", size: 12pt) 
+      #set text(font: "JetBrains Mono", size: 10pt) 
       #align(right + horizon)[
-        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
+        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf.html")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
       ]
     ],
   )
@@ -62,10 +60,18 @@
            size: fontsize)
 
   show heading.where(level:1): it => {
-    if "2" in repr(it.body) {
+    if "1" not in repr(it.body) {
       pagebreak()
     }
     set text(font: "JetBrains Mono", weight: "bold", size: 1.4em)
+    it
+  }
+
+  show heading.where(level:2): it => {
+    if "1" not in repr(it.body) {
+      pagebreak()
+    }
+    set text(weight: "bold", size: 1.25em)
     it
   }
 
