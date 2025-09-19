@@ -1,10 +1,20 @@
 ---
 title: "H24 // 2P-Y"
+format:
+    html: default
+    lektorodd-lf-typst:
+        output-file: 2PY-H24
+format-links:
+  - html
+  - format: lektorodd-lf-typst
+    text: "Last ned som PDF"
 from: markdown+emoji
 author: "Torodd F. Ottestad"
 date: "2024-12-01"
 categories: [2P-Y, H24, eksamen]
 ---
+
+::: {.content-hidden unless-format="html"}
 
 # Løysingsforslag 2P-Y - hausten 2024 
 
@@ -14,21 +24,17 @@ Eg kan ikkje lova at løysinga er feilfri... 😊
 
 Gje meg gjerne [ein lyd](/about.qmd) om du ser feil eller lurer på noko anna.  
 
-**Sist oppdatert:** 03.12.2024
+**Sist oppdatert: 19.09.2025** (lagt til nedlasting som pdf)
 
----
+:::
 
-Eksamenssettet finn du [hos UDIR](https://sokeresultat.udir.no/eksamensoppgaver.html)
+# Del 1
 
----
-
-## Del 1
-
-### Oppgåve 1
+## Oppgåve 1
 
 12 kr tilsvarer 30 % av opprinneleg pris. Då må 10 % vere 4 kr og 100 % vere 40 kr.
 
-#### Alternativ løysing
+### Alternativ løysing
 
 Bruker formelen $\text{opprinneleg pris} \cdot \text{vf} = \text{ny pris}$. Lar $x$ vere opprinneleg pris.
 
@@ -41,12 +47,12 @@ x &= 40
 
 Opprinneleg pris var 40 kr.
 
-### Oppgåve 2
+## Oppgåve 2
 
 Timar arbeidd dei siste 10 dagane:
 $$ 3 \quad 3 \quad 4 \quad 5 \quad 6 \quad 8 \quad 0 \quad 3 \quad 5 \quad 5 $$
 
-#### a) Gjennomsnitt og median
+### a) Gjennomsnitt og median
 
 Gjennomsnittleg timar arbeidd per dag:
 $$ \frac{3+3+4+5+6+8+0+3+5+5}{10} = \frac{42}{10} = 4,2 $$
@@ -61,7 +67,7 @@ $$ \frac{4+5}{2} = 4,5 $$
 
 Gjennomsnittleg timar arbeidd per dag er 4,2 og medianen er 5 timar.
 
-#### b) Kumulativ frekvens
+### b) Kumulativ frekvens
 
 Lagar ein frekvenstabell
 
@@ -78,7 +84,7 @@ Lagar ein frekvenstabell
 Ser av tabellen at den kumulative frekvensen for 5 timar er 8. Det vil seie at Lars har arbeidd 5 timar eller mindre 8 av dei siste 10 dagane.
 
 
-### Oppgåve 3
+## Oppgåve 3
 
 To storleikar er proporsjonale dersom ein kan skrive dei som $y = kx$ der $k$ er ein konstant. Dermed er det slik at om ein av dei to storleikane er $0$, så er den andre også $0$. Grafisk betyr det at linja må gå gjennom origo. Det er berre $f$ som går gjennom origo.
 
@@ -92,7 +98,7 @@ Les me av grafen til $p$ ser me at når $x=1$ er $y=1000$ og når $x=2$ er $y=50
 
 **Grafen til $p$ viser samanhengen mellom to omvendt proporsjonale storleikar.**
 
-### Oppgåve 4
+## Oppgåve 4
 
 Det ser ut som figurane er sett saman av ei kvadratisk ramme med ein "arm" med lengde 2 ut frå kvart hjørne. 
 
@@ -105,13 +111,13 @@ Gjer (b) før (a) for å gjera det enklare å finna figur 10...
 :::
 
 
-#### b) Formel 
+### b) Formel 
 
 I figur $n$ vil det i følgje mønsteret skissert over vere $4n$ prikkar i omkretsen av kvadratet og $4\cdot 2=8$ prikkar i "armane".
 
 $$F(n) = 4n + 8$$
 
-#### a) Finn talet prikkar i figur 4 og 10
+### a) Finn talet prikkar i figur 4 og 10
 
 Bruker formelen frå (b) til å finna antal prikkar i figur 4 og 10.
 
@@ -121,7 +127,7 @@ $$F(10) = 4\cdot 10 + 8 = 40 + 8 = 48$$
 
 I figur 4 er det 24 prikkar og i figur 10 er det 48 prikkar.
 
-### Oppgåve 5
+## Oppgåve 5
 
 Koden: 
 
@@ -139,7 +145,7 @@ while x <= 4:
 print(s)
 ```
 
-#### a) Praktisk tolking av uttrykket
+### a) Praktisk tolking av uttrykket
 
 I linje 1-2 definerer Sara ein funksjon $f(x) = 200 \cdot 0.975^x$. 
 Dette er ein eksponentiell funksjon som startar på 200 og minkar med 2,5 % for kvar einaste $x$-verdi.
@@ -148,7 +154,7 @@ $0,975$ er veksfaktor. $1-0,975=0,025$ som tilsvarar $2,5 \%$ nedgang
 
 Funksjonen viser altså korleis utsleppet utviklar seg. Det startar med 200 tonn og minkar med 2,5 % for kvar år (`x`). 
 
-#### b) Kva vil verdien av `s` fortelje?
+### b) Kva vil verdien av `s` fortelje?
 
 Verdien til `s` startar på 0. For kvar runde i løkka legg me til utsleppet for det aktuelle året, `f(x)`.
 
@@ -156,16 +162,16 @@ Verdien til `s` startar på 0. For kvar runde i løkka legg me til utsleppet for
 
 Verdien til `s` vil altså vere det totale utsleppet til bedrifta for dei 5 første åra.
 
-## Del 2
+# Del 2
 
-### Oppgåve 1
+## Oppgåve 1
 
 Isteproduksjon i flasker kvar månad frå og med desember 2024 ($x=0$) gitt ved: 
 $$F(x) = 620 \cdot 1.045^x$$
 
-#### a) Spørsmål 1 og 2 på ulike måtar
+### a) Spørsmål 1 og 2 på ulike måtar
 
-##### Grafisk
+#### Grafisk
 
 Plottar funksjonen i GeoGebra. Teikner inn linja $x=12$ for å finna produksjonen i desember 2025. Teikner inn linja $y=2000$ for å finna kva månad produksjonen er over 2000 flasker. Finn skjæringspunkta mellom $F(x)$ og dei to linjene.
 
@@ -176,7 +182,7 @@ Ser av punkt A at produksjonen i desember 2025 er på ca. 1050 flasker.
 Ser av punkt B at produksjonen er over 2000 flasker når $x=27$. Dette vil seie at produksjonen er over 2000 flasker frå og med mars 2027.
 
 
-##### Med CAS
+#### Med CAS
 
 1) Definerer funksjonen. 
 2) Set inn $x=12$ for å finna produksjonen i desember
@@ -186,7 +192,7 @@ Ser av punkt B at produksjonen er over 2000 flasker når $x=27$. Dette vil seie 
 
 Ser av CAS at produksjonen i desember 2025 er på ca. 1050 flasker og at produksjonen er over 2000 flasker frå og med mars 2027.
 
-#### b) Prosentvis auke frå des24 til des26
+### b) Prosentvis auke frå des24 til des26
 
 Vekstfaktoren pr. mnd er $1,045$. For å finna prosentvis auke frå desember 2024 til desember 2026 kan me sjå kva som skjer med vekstfaktoren i løpet av 24 månader.
 
@@ -198,9 +204,9 @@ Vekstfaktoren pr. mnd er $1,045$. For å finna prosentvis auke frå desember 202
 Auken frå desember 2024 til desember 2026 er omlag 187,6 %.
 
 
-### Oppgåve 2
+## Oppgåve 2
 
-#### a) Bakteriar på svampen
+### a) Bakteriar på svampen
 
 :::: {.columns}
 ::: {.column width=60%}
@@ -216,7 +222,7 @@ Mellom 25 og 54 milliardar bakteriar per $cm^3$ og omlag $150 cm^3$ kjøkkensvam
 
 ::::
 
-#### b) Meter?
+### b) Meter?
 
 :::: {.columns}
 ::: {.column width=60%}
@@ -237,7 +243,7 @@ Brukar gjennomsnittet av grensene for både lengde og tal bakteriar som estimat.
 
 
 
-### Oppgåve 3
+## Oppgåve 3
 
 \begin{align*}
 \text{10\% av 50} &= 0,1 \cdot 50 &&=\frac{1}{100} \cdot 10 \cdot 50 \\
@@ -253,9 +259,9 @@ Tilsvarande gjeld for dei to andre oppgåvepara. Generelt:
 
 Oppgåvepara vil dermed alltid ha same svar om dei føl dette oppsettet.
 
-### Oppgåve 4
+## Oppgåve 4
 
-#### a) Modellar
+### a) Modellar
 
 Lar $x$ vere antal dagar. 
 
@@ -268,7 +274,7 @@ $$B(x) = 1995 + 30x$$
 **Modell C** 3490 kr fastpris og 24 kr pr dag.
 $$C(x) = 3490 + 24x$$
 
-#### b) Kva tid løner avtale B seg?
+### b) Kva tid løner avtale B seg?
 
 Plottar alle tre modellane i GeoGebra og ser kva tid $B$ vert billigare enn $A$ og $C$.
 
@@ -281,7 +287,7 @@ Ser av skjæringspunkta $D$ og $E$ at avtale B er den billigaste frå og med dag
 
 
 
-### Oppgåve 5
+## Oppgåve 5
 
 ::: {.callout-tip}
 ## Statistikk i CAS :rocket:
@@ -289,14 +295,14 @@ Ser av skjæringspunkta $D$ og $E$ at avtale B er den billigaste frå og med dag
 :clapper: [Her](https://youtu.be/08HBy3evwt4?si=QIaXXWE9TzyL6wqu) er eit par tips til statistikkoppgåver i CAS.  
 :::
 
-#### a) Median, gjennomsnitt og standardavvik på lag A
+### a) Median, gjennomsnitt og standardavvik på lag A
 
 Bruker CAS. Vel populasjonsstandardavvik (`stavvp`) sidan det er seks personar på laget og me har data på alle seks. 
 
 ![📷 CAS](img/5a.png){width="45%"}
 
 
-#### b) B og C vs A
+### b) B og C vs A
 
 **Lag B:** 
 
@@ -314,7 +320,7 @@ At standardavviket er høgare, betyr at det er meir spreiing i alderen på perso
 
 
 
-#### c) Mogleg aldersfordeling på B og C
+### c) Mogleg aldersfordeling på B og C
 
 Forslag til aldersfordelingar på lag B og C som svarar til opplysningane i oppgåva:
 
@@ -331,9 +337,9 @@ Forslag til aldersfordelingar på lag B og C som svarar til opplysningane i oppg
 ::::
 
 
-### Oppgåve 6
+## Oppgåve 6
 
-#### a) bestemme a og b
+### a) bestemme a og b
 
 Ser av tabellen at $L(1) = a \cdot 1^b = 10$ som vil seie at $a = 10$.
 
@@ -345,7 +351,7 @@ Ser av CAS at $b = \frac{1}{3}$.
 
 **Tala er $a=10$ og $b=1/3$.**
 
-#### b) 45 min samanhengande
+### b) 45 min samanhengande
 
 Bruker CAS
 
@@ -353,7 +359,7 @@ Bruker CAS
 
 **Det vil ta omlag 13 veker før ho klarar å springa 45 minutt samanhengande.**
 
-#### c) Gjennomsnittleg auke frå dag 1 til 60
+### c) Gjennomsnittleg auke frå dag 1 til 60
 
 Bruker CAS. Finn gjennomsnittleg auke. Deler endring i tid med endring i dagar.
 
@@ -362,7 +368,7 @@ Bruker CAS. Finn gjennomsnittleg auke. Deler endring i tid med endring i dagar.
 **Gjennomsnittleg auke per dag frå dag 1 til 60 er omlag 0,5 min.**
 
 
-### Oppgåve 7
+## Oppgåve 7
 
 Lagar litt grafar og utrekningar ut frå datamaterialet. 
 
@@ -401,11 +407,11 @@ Dette er ei ganske open oppgåve, og ein kan rekna på mange ulike ting. Ein kan
 
 
 
-### Oppgåve 8
+## Oppgåve 8
 
 Vel å løysa med Python:
 
-#### a)
+### a)
 
 Startverdi er 40 km. 
 
@@ -424,7 +430,7 @@ for i in range(49):
 print("I veke 50 vil han sykla", round(km,2), "km")
 ```
 
-#### b)
+### b)
 
 Vil finna ut kor mykje han har sykla samanlagt etter 50 veker. Endrar litt på programmet:
 
