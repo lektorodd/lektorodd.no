@@ -115,11 +115,17 @@ g\left(\frac{1}{2}\right) &= \frac{1}{2}e^{\frac{1}{2}} \cdot \left(2\left(\frac
 
 Botnpunkt i $\left(\frac{1}{2}, 0\right)$
 
+::: {.content-hidden when-format="html"}
+```{typst}
+#pagebreak()
+```
+:::
+
 ## Oppgåve 3
 
 Løys likningane
 
-## a)
+### a) eksponentiallikning
 
 $$ \begin{align*}
 3^{3x+2}-5 &= 76 \\
@@ -128,7 +134,7 @@ $$ \begin{align*}
 x &= \frac{2}{3}
 \end{align*}$$ 
 
-## b)
+### b) logaritmelikning
 
 $$ \begin{align*}
 3\lg(x)+2\lg(x^2) + \lg\left(\frac{1}{x^9}\right)&=2 \\
