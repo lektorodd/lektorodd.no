@@ -23,7 +23,6 @@ website:
         href: about.qmd
         icon: person
     right:
-   
       - icon: github
         href: https://github.com/lektorodd/lektorodd.no
       - icon: youtube
@@ -42,13 +41,8 @@ format:
       dark: [journal, custom-dark.scss]
     code-line-numbers: true
 
-
-  
 execute:
   freeze: auto  
 comments:
   giscus:
     repo: lektorodd/lektorodd.no
-
-
-

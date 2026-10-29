@@ -1,0 +1,20 @@
+typography:
+  fonts:
+    - family: Crimson Pro
+      source: google
+      weight: [300, 400, 600, 700, 900]
+      style: [normal, italic]
+    - family: Source Sans Pro
+      source: google
+      weight: [300, 400, 600, 700]
+      style: [normal, italic]
+    - family: JetBrains Mono
+      source: google
+      weight: [400, 500]
+  base:
+    family: Source Sans Pro
+  headings:
+    family: Crimson Pro
+    weight: 700
+  monospace:
+    family: JetBrains Mono

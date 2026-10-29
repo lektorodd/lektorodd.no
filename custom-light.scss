@@ -1,217 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/*-- scss:default --*/
-// Fargar
-$body-bg: #fdfdfd; // Lys bakgrunn, nesten hvit for å unngå blending.
-$body-color: #2c3e50; // Mørk tekstfarge for høy kontrast.
-$link-color: #3498db; // Frisk blå for linker, inspirert av moderne UI-design.
-$input-bg: #ffffff; // Ren hvit for input-bokser.
-$popover-bg: #ffffff; // Samme som input for konsistens.
+/*-- scss:defaults --*/
 
-$tag-bg: lighten($link-color, 35%); // Lysere versjon av linkfargen for bakgrunn.
-$tag-color: $link-color; // Samme farge som linker for tekst.
+// ── Lektorodd color tokens ──────────────────────────────────
+$ink:           #1F2933;
+$ink-lightest:  #E5E7EB;
+$ink-light:     #CBD2E0;
+$ink-dark:      #111827;
 
-$navbar-bg-gradient: linear-gradient(90deg, #3498db, #9E52FF);
+$blue:          #2B6CB0;
+$blue-lightest: #DEEAF7;
+$blue-light:    #9CBEE3;
+$blue-dark:     #1E4B7B;
 
+$gold:          #975A16;
+$gold-lightest: #F9E5C2;
+$gold-light:    #E7BC73;
 
-// Fontar
-$font-family-sans-serif: 'Inter', sans-serif;
-$font-family-monospace: 'JetBrains Mono', monospace;
+$green:         #276749;
+$green-lightest:#D9F1E4;
 
-$font-size-root: 16px; // Standard base fontstørrelse.
-$toc-font-size: 14px; // Litt mindre for å skille fra hovedinnhold.
-$h1-font-size: 2.5rem; // Fremhevede overskrifter.
-$h2-font-size: 2rem;
-$h3-font-size: 1.75rem;
-$h4-font-size: 1.5rem;
-$h5-font-size: 1.25rem;
+$red:           #C53030;
+$red-lightest:  #FCE2E2;
 
-// Kodeblokk
-$code-block-border-left: #e67e22; // Oransje venstre kant for visuell markering.
+$violet:        #805AD5;
+$violet-lightest:#E9E0FB;
+
+// ── Quarto variable overrides ───────────────────────────────
+$body-bg:              #F7F8FA;
+$body-color:           $ink-dark;
+$link-color:           $blue;
+$input-bg:             #ffffff;
+$popover-bg:           #ffffff;
+
+$font-family-sans-serif: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+$font-family-monospace:  'JetBrains Mono', 'Fira Mono', monospace;
+
+$font-size-root:  16px;
+$toc-font-size:   14px;
+$h1-font-size:    2.5rem;
+$h2-font-size:    2rem;
+$h3-font-size:    1.6rem;
+$h4-font-size:    1.3rem;
+$h5-font-size:    1.1rem;
+
+$navbar-bg:  $ink-dark;
+$navbar-fg:  $ink-lightest;
+$navbar-hl:  $gold-light;
+
+$sidebar-bg: $ink-lightest;
+$sidebar-fg: $ink-dark;
+$sidebar-hl: $blue;
+
+$footer-bg:  #F7F8FA;
+$footer-fg:  $ink-light;
+
+$code-block-border-left:       $gold;
 $code-block-border-left-style: solid;
-$code-block-border-left-size: 4px;
-$code-block-bg: #f8f9fa; // Lys grå for subtil kontrast.
-$code-block-bg-padding: 0.5em;
-$code-block-padding-left: 1em;
-$code-block-bg-alpha: -0.2;
-$code-annotation-higlight-color: #16a085; // Grønn for markerte linjer.
-$code-annotation-higlight-bg: #e8f8f5;
-$btn-code-copy-color: #bdc3c7; // Grå for kopieringsknapp.
-$btn-code-copy-color-active: #34495e; // Mørkere grå ved hover.
+$code-block-border-left-size:  3px;
+$code-block-bg:                $ink-lightest;
+$code-block-bg-padding:        0.5em;
+$code-block-padding-left:      1em;
+$code-block-bg-alpha:          -0.2;
+$code-annotation-higlight-color: $green;
+$code-annotation-higlight-bg:    $green-lightest;
+$btn-code-copy-color:            $ink-light;
+$btn-code-copy-color-active:     $ink-dark;
 
-// Inlinekode
-$code-bg: #eef1f5; // Lys blågrå bakgrunn.
-$code-color: #2c3e50; // Samme mørke tekstfarge som hovedteksten.
+$code-bg:    #EEF1F5;
+$code-color: $ink-dark;
 
-// Innhald
-$toc-color: #34495e; // Mørkeblå tekstfarge.
-$toc-font-size: 14px;
-$toc-active-border: #2980b9; // Fremheving med blå kant.
-$toc-inactive-border: #bdc3c7; // Lys grå kant for inaktive elementer.
+$toc-color:           $ink;
+$toc-active-border:   $blue;
+$toc-inactive-border: $ink-light;
 
-// Navbar
-$navbar-bg: #3498db; // Blå bakgrunn for navbar, matcher linkfargen.
-$navbar-fg: #ffffff; // Hvit tekst for høy kontrast mot den blå bakgrunnen.
-$navbar-hl: #ecf0f1; // Lys grå for hover-effekt på linker.
-$sidebar-bg: #ecf0f1; // Lys grå for sidebar.
-$sidebar-fg: #2c3e50;
-$sidebar-hl: #3498db;
-$footer-bg: #fdfdfd; // Lys, lik hovedbakgrunnen.
-$footer-fg: #2c3e50;
-
-// Callout
 $callout-border-width: 3px;
 $callout-border-scale: 5%;
-$callout-icon-scale: 10%;
-$callout-margin-top: 1.5rem;
+$callout-icon-scale:   10%;
+$callout-margin-top:    1.5rem;
 $callout-margin-bottom: 1.5rem;
 
-$callout-color-note: #3498db; // Blå for notater.
-$callout-color-tip: #2ecc71; // Grønn for tips.
-$callout-color-caution: #e67e22; // Oransje for advarsler.
-$callout-color-warning: #f1c40f; // Gul for forsiktighetsmeldinger.
-$callout-color-important: #e74c3c; // Rød for viktige meldinger.
+$callout-color-note:      $blue;
+$callout-color-tip:       $green;
+$callout-color-caution:   $gold;
+$callout-color-warning:   #D97706;
+$callout-color-important: $red;
 
+// tag helpers (reused below)
+$tag-bg:    $blue-lightest;
+$tag-color: $blue-dark;
+$tag-border: $blue-light;
 
 /*-- scss:rules --*/
-// fargar på kategoriar
-.quarto-title .quarto-categories .quarto-category {
-    opacity: 1;
-    background-color: $tag-bg; // Ny variabel for bakgrunnsfarge.
-    color: $tag-color; // Ny variabel for tekstfarge.
-    padding: 0.25em 0.5em; // Litt padding for bedre lesbarhet.
-    border-radius: 4px; // Avrundede hjørner for et moderne utseende.
-    font-size: 0.85em; // Litt mindre skriftstørrelse for å skille fra hovedtekst.
-    margin-right: 0.5em; // Avstand mellom taggene.
-    display: inline-block; // Sikrer riktig visning ved siden av hverandre.
-    font-weight: 600; // Gjør teksten litt fetere.
-    position: relative; // For å kunne plassere ikonet.
-    font-family: $font-family-monospace; // Bruker monospace-font for tags.
+
+// ── Headings → Crimson Pro ──────────────────────────────────
+h1, h2, h3, h4, h5, h6,
+.quarto-title h1,
+.title {
+  font-family: 'Crimson Pro', Georgia, serif;
+  letter-spacing: -0.01em;
 }
 
-// Farger på kategorier i listing-siden
-.quarto-light .listing-categories .listing-category,
-.quarto-dark .listing-categories .listing-category {
-  cursor: pointer;
-  opacity: 1;
-  background-color: $tag-bg; // Bruker samme bakgrunnsfarge som andre kategorimerker
-  color: $tag-color; // Samme tekstfarge som linker
-  padding: 0.25em 0.5em; // Padding for bedre lesbarhet
-  border-radius: 4px; // Avrundede hjørner
-  font-size: 0.60em; // Konsistent skriftstørrelse
-  margin-right: 0.5em; // Avstand mellom kategorier
-  display: inline-block; // Sikrer riktig visning
-  font-weight: 600; // Litt fetere tekst
-  font-family: $font-family-monospace; // Monospace-font for konsistens
-  border: 1px solid $link-color; // Kantlinje for synlighet
-  text-decoration: none; // Fjerner understrykning
-  transition: background-color 0.2s, border-color 0.2s; // Jevn overgang ved hover
+h1 { font-weight: 700; }
+h2 { font-weight: 600; }
+h3, h4 { font-weight: 600; }
+
+// ── Navbar ──────────────────────────────────────────────────
+.navbar {
+  background: $ink-dark !important;
+  border-bottom: 1px solid rgba(255,255,255,.06);
 }
 
-// Hover-effekt for kategoriene
-.quarto-light .listing-categories .listing-category:hover,
-.quarto-dark .listing-categories .listing-category:hover {
-  background-color: darken($tag-bg, 10%);
-  border-color: darken($link-color, 10%);
-}
-
-// Aktiv kategori (hvis aktuelt)
-.quarto-light .listing-categories .listing-category.active,
-.quarto-dark .listing-categories .listing-category.active {
-  background-color: $link-color;
-  color: #ffffff;
-  border-color: darken($link-color, 10%);
-}
-
-// Grid item
-.quarto-grid-item {
-    background-color: darken($body-bg, 2%);
-    padding: 0.55em;
-    border-radius: 10px; // Mørk bakgrunn for listing-siden.
-}
-
-
-.navbar  {
-    background: $navbar-bg-gradient;
-    color: $navbar-fg;
-}
-
-// Ensure that the text and links are readable over the gradient
 .navbar .navbar-brand,
 .navbar .navbar-nav .nav-link {
   color: $navbar-fg;
+  font-weight: 600;
+  font-size: .85rem;
+  letter-spacing: .02em;
+  &:hover { color: $gold-light; }
+}
+
+.navbar .navbar-brand {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $gold-light;
+}
+
+// ── Title banner ────────────────────────────────────────────
+.quarto-title-block .quarto-title-banner {
+  background: $ink-dark;
+  color: $ink-lightest;
+}
+
+// ── Categories / tags ───────────────────────────────────────
+.quarto-title .quarto-categories .quarto-category,
+.listing-categories .listing-category {
+  opacity: 1;
+  background-color: $tag-bg;
+  color: $tag-color;
+  border: 1px solid $tag-border;
+  padding: 0.2em 0.55em;
+  border-radius: 2px;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  margin-right: 0.4em;
+  display: inline-block;
+  font-family: $font-family-sans-serif;
+  text-decoration: none;
+  transition: background-color .15s, border-color .15s;
 
   &:hover {
-    color: $navbar-hl;
+    background-color: $blue;
+    border-color: $blue-dark;
+    color: #fff;
   }
 }
 
-.quarto-title-block .quarto-title-banner  {
-    background: $navbar-bg-gradient;
-    color: $navbar-fg;
+.listing-categories .listing-category {
+  font-size: 0.65em;
+  cursor: pointer;
 }
 
-.quarto-title h1 {
-  font-family: $font-family-monospace;
+// ── Grid item cards ─────────────────────────────────────────
+.quarto-grid-item {
+  background-color: #ffffff;
+  border: 1px solid $ink-lightest;
+  border-radius: 4px;
+  padding: 0.6em;
+  box-shadow: 0 1px 4px rgba(2,6,23,.06);
 }
 
+// ── Landing page boxes ──────────────────────────────────────
 .framsideboks {
-    display: flex;
-    align-items: center;
-    background: $navbar-bg-gradient;
-    color: $navbar-fg;
-    padding: 0.55em;
-    border-radius: 1em;
-    padding-inline: 1em;
-    margin-bottom: 2em;
-}
-.content-wrapper {
-    display: flex;
-    align-items: center; /* Sentraliserer ikonet og teksten */
-    justify-content: center;
-    gap: 1em; /* Avstand mellom ikon og tekst */
+  display: flex;
+  align-items: center;
+  background: $ink-dark;
+  color: $ink-lightest;
+  padding: 1.2em 1.4em;
+  border-radius: 6px;
+  margin-bottom: 1.2em;
+  border: 1px solid rgba(255,255,255,.06);
+  transition: box-shadow .15s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(2,6,23,.14);
   }
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  width: 100%;
+}
 
 .framsideboks a {
-  opacity: 1;
-  background-color: $tag-bg; // Ny variabel for bakgrunnsfarge.
-  color: $tag-color; // Ny variabel for tekstfarge.
-  padding: 0.25em 0.5em; // Litt padding for bedre lesbarhet.
-  border-radius: 4px; // Avrundede hjørner for et moderne utseende.
-  font-size: 32px; // Litt mindre skriftstørrelse for å skille fra hovedtekst.
-  font-weight: 600; // Gjør teksten litt fetere.
-  position: relative; // For å kunne plassere ikonet.
-  line-height: 1; // Juster linjehøyden for å redusere bakgrunnshøyden.
-  white-space: nowrap; // Forhindrer linjebryting.
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $gold-light;
+  text-decoration: none;
+  line-height: 1.1;
 
-  @media (max-width: 768px) {
-    font-size: 24px;
-  }
+  &:hover { color: #fff; }
 
-  @media (max-width: 480px) {
-    font-size: 18px;
-  }
+  @media (max-width: 768px) { font-size: 1.4rem; }
+  @media (max-width: 480px) { font-size: 1.15rem; }
 }
 
 .framsideboks p {
-    padding-top: 0.5em;
+  color: $ink-light;
+  font-size: .95rem;
+  margin: 0;
+  padding-top: 0.3em;
 }
 
 .icon-container {
-    width: 90px;
-    height: 90px;
-    background-color: $tag-bg; // Bruk hovedlinkfargen.
-    border-radius: 50%; // Gjør ikonet rundt.
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Enkel skygge.
-    flex-shrink: 0;
-  }
-  
-  .icon-container i {
-    color: $tag-color; 
-    font-size: 60px; // Juster ikonstørrelsen.
-  }
+  width: 72px;
+  height: 72px;
+  background-color: rgba($blue, .15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 
+  i {
+    color: $blue-light;
+    font-size: 2.2rem;
+  }
+}
+
+// ── Light/dark toggle — bigger, more visible ───────────────
+#quarto-color-scheme-toggle {
+  font-size: 1.3rem !important;
+  opacity: 0.9 !important;
+  padding: 4px 6px !important;
+  border-radius: 6px !important;
+  background: rgba(255,255,255,.1) !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  transition: background .15s;
+  margin-left: 2px;
+
+  &:hover {
+    background: rgba(255,255,255,.2) !important;
+    opacity: 1 !important;
+  }
+}

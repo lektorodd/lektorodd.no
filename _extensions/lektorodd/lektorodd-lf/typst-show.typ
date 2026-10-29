@@ -45,7 +45,7 @@ $endif$
 $if(mainfont)$
   font: ("$mainfont$",),
 $elseif(brand.typography.base.family)$
-  font: $brand.typography.base.family$,
+  font: ("$brand.typography.base.family$",),
 $endif$
 $if(fontsize)$
   fontsize: $fontsize$,
@@ -53,10 +53,16 @@ $elseif(brand.typography.base.size)$
   fontsize: $brand.typography.base.size$,
 $endif$
 $if(title)$
-$if(brand.typography.headings.family)$
-  heading-family: $brand.typography.headings.family$,
+$if(heading-family)$
+  heading-family: ("$heading-family$",),
+$elseif(brand.typography.headings.family)$
+  heading-family: "$brand.typography.headings.family$",
+$elseif(mainfont)$
+  heading-family: ("$mainfont$",),
 $endif$
-$if(brand.typography.headings.weight)$
+$if(heading-weight)$
+  heading-weight: $heading-weight$,
+$elseif(brand.typography.headings.weight)$
   heading-weight: $brand.typography.headings.weight$,
 $endif$
 $if(brand.typography.headings.style)$
@@ -75,7 +81,24 @@ $endif$
 $if(section-numbering)$
   sectionnumbering: "$section-numbering$",
 $endif$
+$if(codefont)$
+  codefont: ($for(codefont)$"$codefont$",$endfor$),
+$elseif(monofont)$
+  codefont: ("$monofont$",),
+$elseif(brand.typography.monospace.family)$
+  codefont: ("$brand.typography.monospace.family$",),
+$endif$
   pagenumbering: $if(page-numbering)$"$page-numbering$"$else$none$endif$,
+$if(toc)$
+  toc: $toc$,
+$endif$
+$if(toc-title)$
+  toc_title: [$toc-title$],
+$endif$
+$if(toc-indent)$
+  toc_indent: $toc-indent$,
+$endif$
+  toc_depth: $toc-depth$,
   cols: $if(columns)$$columns$$else$1$endif$,
   doc,
 )

@@ -1,13 +1,7 @@
-// This is an example typst template (based on the default template that ships
-// with Quarto). It defines a typst function named 'article' which provides
-// various customization options. This function is called from the 
-// 'typst-show.typ' file (which maps Pandoc metadata function arguments)
-//
-// If you are creating or packaging a custom typst template you will likely
-// want to replace this file and 'typst-show.typ' entirely. You can find 
-// documentation on creating typst templates and some examples here: 
-//   - https://typst.app/docs/tutorial/making-a-template/
-//   - https://github.com/typst/templates
+// Lektorodd-lf Typst template
+// Design system: Crimson Pro (all headings + title), Source Sans Pro (body)
+// JetBrains Mono: code only
+// Colors: ink-dark #111827, blue #2B6CB0, gold #E7BC73
 
 #let lf(
   title: "Løysingsforslag",
@@ -17,94 +11,181 @@
   abstract: none,
   abstract-title: none,
   cols: 1,
-  margin: (x: 1in, y: 1in),
+  margin: (x: 1.1in, y: 1in),
   paper: "a4",
   lang: "no",
   region: "NO",
-  font: "Inter",
+  font: ("Source Sans Pro", "Source Sans 3", "Helvetica Neue", "Arial"),
   fontsize: 11pt,
   title-size: 1.5em,
-  subtitle-size: 1.25em,
-  heading-family: "Inter",
+  subtitle-size: 1.2em,
+  heading-family: "Crimson Pro",
   heading-weight: "bold",
   heading-style: "normal",
-  heading-color: black,
+  heading-color: rgb("#111827"),
   heading-line-height: 0.65em,
+  codefont: ("JetBrains Mono NL", "JetBrains Mono", "Courier New"),
   sectionnumbering: none,
-  pagenumbering: "1/1",
+  pagenumbering: "1 / 1",
   toc: false,
+  toc_title: none,
+  toc_depth: none,
+  toc_indent: 1.5em,
   doc,
 ) = {
+  let heading-font = if heading-family == none { font } else { heading-family }
+
   set page(
     paper: paper,
     margin: margin,
     numbering: pagenumbering,
+    number-align: center,
     background: place(top)[
-      #box(
-        fill: rgb("#3D5A80"),
-        width: 100%,
-        height: 6%,
-      )
+      #box(fill: rgb("#111827"), width: 100%, height: 5.5%)
     ],
     header: [
-      #set text(font: "JetBrains Mono", size: 10pt) 
+      #set text(font: codefont, size: 9pt)
       #align(right + horizon)[
-        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf.html")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
+        #text(fill: white)[Torodd F. Ottestad]
+        #h(4pt)
+        #link("https://lektorodd.no/lf.html")[
+          #text(fill: rgb("#E7BC73"))[\@lektorodd]
+        ]
       ]
     ],
+    footer: context [
+      #set text(font: font, size: 9pt, fill: rgb("#CBD2E0"))
+      #line(length: 100%, stroke: 0.5pt + rgb("#E5E7EB"))
+      #v(2pt)
+      #grid(
+        columns: (1fr, 1fr, 1fr),
+        align(left)[#text(fill: rgb("#9CBEE3"))[lektorodd.no]],
+        align(center)[#counter(page).display() #h(2pt) / #h(2pt) #counter(page).final().at(0)],
+        align(right)[#title],
+      )
+    ],
   )
-  set par(justify: true)
-  set text(lang: lang,
-           region: region,
-           font: font,
-           size: fontsize)
 
-  show heading.where(level:1): it => {
-    if "1" not in repr(it.body) {
-      pagebreak()
-    }
-    set text(font: "JetBrains Mono", weight: "bold", size: 1.4em)
-    it
+  set par(justify: true, leading: 0.75em)
+  set text(
+    lang: lang,
+    region: region,
+    font: font,
+    size: fontsize,
+    fill: rgb("#111827"),
+  )
+
+  // ── Headings ──────────────────────────────────────────────
+  show heading.where(level: 1): it => {
+    v(0.6em)
+    block[
+      #set text(
+        font: heading-font,
+        weight: heading-weight,
+        style: heading-style,
+        size: 1.7em,
+        fill: heading-color,
+      )
+      #it.body
+      #v(0.15em)
+      #line(length: 100%, stroke: 1.5pt + rgb("#2B6CB0"))
+    ]
+    v(0.5em)
   }
 
-  show heading.where(level:2): it => {
-    if "1" not in repr(it.body) {
-      pagebreak()
-    }
-    set text(weight: "bold", size: 1.25em)
-    it
+  show heading.where(level: 2): it => {
+    v(0.8em)
+    block[
+      #set text(
+        font: heading-font,
+        weight: heading-weight,
+        style: heading-style,
+        size: 1.25em,
+        fill: heading-color,
+      )
+      #it.body
+    ]
+    v(0.2em)
   }
 
+  show heading.where(level: 3): it => {
+    v(0.5em)
+    block[
+      #set text(
+        font: font,
+        weight: 700,
+        size: 0.95em,
+        fill: rgb("#1E4B7B"),
+      )
+      #upper(it.body)
+    ]
+    v(0.1em)
+  }
+
+  // ── Code blocks ───────────────────────────────────────────
+  show raw: set text(font: codefont) if codefont != none
+  show raw.where(block: true): set block(
+    fill: rgb("#F0F2F5"),
+    stroke: none,
+    radius: 4pt,
+    inset: (x: 14pt, y: 12pt),
+    width: 100%,
+  )
+  show raw.where(block: true): set text(size: 0.85em, fill: rgb("#1F2933"))
+  show raw.where(block: false): set text(size: 0.88em, fill: rgb("#1F2933"))
+
+  // ── Links ─────────────────────────────────────────────────
+  show link: it => {
+    set text(fill: rgb("#2B6CB0"))
+    underline(it)
+  }
+
+  // ── Title block ───────────────────────────────────────────
   if title != none {
-    align(center)[#block(inset: 2em)[
-      #set par(leading: heading-line-height)
-      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-           or heading-color != black or heading-decoration == "underline"
-           or heading-background-color != none) {
-        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
-        text(size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(size: subtitle-size)[#subtitle]
-        }
-      } else {
-        text(weight: "bold", size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(weight: "bold", size: subtitle-size)[#subtitle]
-        }
+    v(1em)
+    block[
+      #set par(leading: 0.4em)
+      #text(
+        font: heading-font,
+        weight: heading-weight,
+        style: heading-style,
+        size: title-size,
+        fill: heading-color,
+      )[#title]
+      #if subtitle != none {
+        parbreak()
+        text(
+          font: heading-font,
+          style: "italic",
+          weight: 400,
+          size: subtitle-size,
+          fill: rgb("#2B6CB0"),
+        )[#subtitle]
       }
-    ]]
+    ]
+    v(0.4em)
+    line(length: 100%, stroke: 2pt + rgb("#E7BC73"))
+    v(1em)
   }
 
-  if cols == 1 {
-    doc
-  } else {
-    columns(cols, doc)
+  if toc {
+    let title = if toc_title == none { auto } else { toc_title }
+    block(above: 0em, below: 2em)[
+      #outline(
+        title: title,
+        depth: toc_depth,
+        indent: toc_indent,
+      )
+    ]
   }
+
+  if cols == 1 { doc } else { columns(cols, doc) }
 }
 
+// ── Table defaults ────────────────────────────────────────
 #set table(
-  inset: 6pt,
-  stroke: none
+  inset: 7pt,
+  stroke: (x, y) => (
+    bottom: if y == 0 { 1.5pt + rgb("#2B6CB0") } else { 0.5pt + rgb("#E5E7EB") },
+  ),
 )

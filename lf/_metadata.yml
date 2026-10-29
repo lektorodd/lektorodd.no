@@ -1,7 +1,5 @@
 # options specified here will apply to all posts in this folder
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
-freeze: true
+freeze: auto
 
 # Enable banner style title blocks
 title-block-banner: true
@@ -13,3 +11,11 @@ license: "CC BY"
 toc: true
 toc-title: Innhald
 toc-location: right
+
+format:
+  lektorodd-lf-typst:
+    mainfont: Source Sans Pro
+    codefont: JetBrains Mono
+    code-line-numbers: true
+    heading-family: Crimson Pro
+    heading-weight: 700

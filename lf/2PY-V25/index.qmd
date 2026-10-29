@@ -1,0 +1,233 @@
+---
+title: "V25 // 2P-Y"
+format:
+    html: default
+    lektorodd-lf-typst:
+        output-file: 2PY-V25
+format-links:
+  - html
+  - format: lektorodd-lf-typst
+    text: "Last ned som PDF"
+from: markdown+emoji
+author: "Torodd F. Ottestad"
+date: "11-25-2025"
+categories: [2P-Y, V25, eksamen]
+draft: true
+---
+
+::: {.content-hidden unless-format="html"}
+# Løysingsforslag 2P-Y - våren 2025
+Her er eit forslag til løysing av våreksamen i 2P-Y 2025. 
+
+Eg kan ikkje lova at løysinga er feilfri. Gje meg gjerne ein lyd i kommentarfeltet eller [her](/about.qmd) om du ser feil :mag:
+
+**Sist oppdatert: 25.11.2025** (lagt til nedlasting som pdf)
+
+------------------------------------------------------------------------
+
+Eksamenssettet finn du hos UDIR: [Finn eksamensoppgaver](https://sokeresultat.udir.no/eksamensoppgaver.html)
+
+::: {.callout-tip}
+## Tips
+I menyen til høgre kan finn du løysingsforslaget som pdf!
+:::
+
+:::
+
+# Del 1 - utan hjelpemiddel
+
+## Oppgåve 1
+
+$88 \%$ deltok ikkje, altså deltok $100 \% - 88 \% = 12 \%$.
+
+Me veit at $12 \%$ tilsvarar $3$ elevar. Det vil seie at $1$ elev tilsvarar $4 \%$.
+
+Totalt antal elevar er då $100 \% : 4 \% = 25$ elevar.
+
+## Oppgåve 2
+
+Personar med i vognene:
+$$6 \quad 3 \quad 2 \quad 4 \quad 4 \quad 6 \quad 2 \quad 7 \quad 8 \quad 8$$
+
+Sortert:
+
+$$2 \quad 2 \quad 3 \quad 4 \quad 4 \quad 6 \quad 6 \quad 7 \quad 8 \quad 8$$
+
+### a) gjennomsnitt og median
+
+**Gjennomsnitt:**
+$$\frac{2 + 2 + 3 + 4 + 4 + 6 + 6 + 7 + 8 + 8}{10} = 5$$
+
+Det var i snitt 5 personar i kvar vogn.
+
+**Median:**
+
+Midtpunktet er mellom $5.$ og $6.$ observasjonsverdi, altså mellom $4$ og $6$ personar. $$ \frac{4 + 6}{2} = 5 $$
+
+Medianen er også $5$ personar. 
+
+### b) kumulativ frekvens
+
+Skal finna den kumulative frekvensen for $6$ personar, altså alle vognene med $6$ eller færre personar. Ser at det er $6$ slike vogner.
+
+Kumulativ frekvens for $6$ personar er då $$\frac{6}{10} = 0,6 = 60 \%$$ Det vil seie at $60 \%$ av vognene hadde $6$ eller færre personar.
+
+## Oppgåve 3
+
+### a) 20 elevar
+
+Ser av punkta at om elevtalet vert dobla vert utgiftene per elev halvert. T.d. Når det er $2$ elevar er utgiftene per elev $4000 kr, medan når det er $4$ elevar er utgiftene per elev $2000$ kr.
+
+Bruker dette til å rekna ut utgiftene per elev for $20$ elevar. Ser at når det er $10$ elevar er utgiftene per elev $800 kr$. Doblar me dette til $20$ elevar vert utgiftene per elev halvert til $$\frac{800 kr}{2} = 400 kr$$
+
+### b) Funksjonsuttrykk
+
+Ut frå opplysingane nevnt ovanfor kan me sjå at utgiftene per elev er omvendt proporsjonale med antal elevar. Når antal elevar vert dobla vert utgiftene per elev halvert. Sidan me veit at når det er $2$ elevar er utgiftene per elev $4000 kr$ må den totale utgifta vera $$2 \cdot 4000 kr = 8000 kr$$
+
+Utgiftene per elev $f$ som funksjon av antal elevar $x$ kan dermed skrivast som:
+
+$$f(x) = \frac{8000}{x}$$ 
+
+## Oppgåve 4
+
+Høgre auka frå 24 til 28, altså 4 prosentpoeng. \\
+FrP auka frå 16 til 20, altså 4 prosentpoeng. 
+
+Sjølv om begge partia auka med like mange prosentpoeng er det FrP som har den største prosentvise auken. Dette er fordi 4 er ein større del av 16 enn av 24.
+
+## Oppgåve 5
+
+Vil prøva å få det første leddet så stort som mogleg og det andre leddet så lite som mogleg. Sidan det er tiarpotensar i begge ledda vil det seia at me må ha den største tiarpotens i det første leddet og den minste tiarpotens i det andre leddet. Så brukar eg den nest største talet som faktor i det første leddet og den nest minste talet som faktor i det andre leddet:
+
+$$8\cdot 10^9 - 2 \cdot 10^1$$
+
+## Oppgåve 6
+
+### a) Figur 5
+
+Ser at høgden på rektangla aukar med 1, så figur 5 vil vera 7 høg. Breidda aukar med 2 for kvar figur, så figur 5 vil vera 11 brei. 
+
+Dei kvite felta aukar med 3 for kvar figur, så figur 5 vil ha 13 kvite felt. 
+
+$$
+\begin{align*}
+\text{grøne} &= \text{areal} - \text{kvite} \\
+&= (7 \cdot 11) - 13 \\
+&= 77 - 13 \\
+&= 64
+\end{align*}
+$$ 
+
+### b) formel for kvite
+
+Ser at det er armane i "T"-en som veks med eitt kvadrat i kvar ende frå ein figur til den neste. Prøver meg litt fram og ser følgjande mønster:
+
+| $n$ | mønster | kvite | utrekning |
+|----|---------|-------|-----------|
+| 1  | kvadrat utan armar | 1 | 1 + 3\cdot 0 |
+| 2  | kvadrat med 3 armar på 1 kvadrat | 4 | 1 + 3\cdot 1 |
+| 3  | kvadrat med 3 armar på 2 kvadrat | 7 | 1 + 3\cdot 2 |
+
+Her ser me at me tek det midterste kvadratet og legg til 3 gonger (n-1) for å få talet på kvite felt.
+
+Formelen for kvite felt i figur $n$ er då:
+$$K(n) = 1 + 3(n-1) = 3n - 2$$
+
+### c) formel for grøne
+
+Formelen for grøne felt i figur $n$ er då:
+$$G(n) = \text{areal} - K(n)$$
+
+Ser på mønsteret for arealet:
+
+| $n$ | høgde | breidde | areal | utrekning |
+|----|-------|---------|-------|-----------|
+| 1  | 3     | 3       | 9    | 3 \cdot 3 |
+| 2  | 4     | 5       | 20    | 4 \cdot 5 |
+| 3  | 5     | 7       | 35    | 5 \cdot 7 |
+
+Ser at høgda aukar med 1 for kvar figur, så høgda i figur $n$ er $n + 2$. Breidda aukar med 2 for kvar figur, så breidda i figur $n$ er $2n + 1$.
+
+Arealet i figur $n$ er då
+
+$$A(n) = (n + 2)(2n + 1)$$
+
+og formelen for grøne felt i figur $n$ blir då:
+
+$$
+\begin{align*}
+G(n) &= A(n) - K(n) \\
+&= (n + 2)(2n + 1) - (3n - 2) \\
+&= 2n^2 + n + 4 n + 2 - 3n + 2 \\
+&= 2n^2 + 2n + 4
+\end{align*}
+$$
+
+Sjekkar med $n = 5$:
+
+$$
+\begin{align*}
+G(5) &= 2 \cdot 5^2 + 2 \cdot 5 + 4 \\
+&= 50 + 10 + 4 \\
+&= 64
+\end{align*}
+$$
+
+dermed stemmer formelen med svaret i a).
+
+## Oppgåve 7
+
+| Alder | Antal medlemmar |
+| :--- | :---: |
+| $[16, 20\rangle$ | 20 |
+| $[20, 40\rangle$ | 40 |
+| $[40, 60\rangle$ | 30 |
+| $[60, 90\rangle$ | 10 |
+
+Legg til grunn at alderen er jamnt fordelt i kvart intervall for å gjera det enklare å estimera sentralmåla. Finn midtpunkta i kvart intervall og multipliserer med antal medlemmar:
+
+| Alder | Antal medlemmar | Midtpunkt | Produkt |
+| :--- | :---: | :---: | :---: |
+| $[16, 20\rangle$ | 20 | 18 | 360 |
+| $[20, 40\rangle$ | 40 | 30 | 1200 |
+| $[40, 60\rangle$ | 30 | 50 | 1500 |
+| $[60, 90\rangle$ | 10 | 75 | 750 |
+
+Totalt antal medlemmar er $20 + 40 + 30 + 10 = 100$.
+
+Gjennomsnittsalderen er då:
+$$\frac{360 + 1200 + 1500 + 750}{100} = \frac{3810}{100} = 38,1\approx 38$$
+
+Medianen er alderen til den midterste personen. Sidan det er klassedelt data (og me kun antar at dei er jamnt fordelte) er det godt nok å finna eit estimat for person nummer 50. 
+
+Ser at dei første $20$ personane er i intervallet $[16, 20\rangle$, og dei neste $40$ personane er i intervallet $[20, 40\rangle$. Person nummer $50$ vil dermed vera i intervallet $[20, 40\rangle$, meir nøyaktig $50-20 = 30$ personar inn i dette intervallet. Dermed får me:
+
+$$20 + \frac{30}{40} \cdot 20 = 20 + 15 = 35$$
+
+Trine må ha gått ut frå det same som oss, at alderen er jamnt fordelt i kvart intervall.Då får ho gjennomsnittsalder på omlag $38$ år og medianalder på omlag $35$ år.
+
+## Oppgåve 8
+
+```{python}
+matsvinn = 160
+mål = matsvinn / 2
+vf = 0.87
+
+år = 2025
+
+while matsvinn > mål:
+    matsvinn = matsvinn * vf
+    år = år + 1
+
+print(år)
+print(matsvinn)
+```
+
+Ser av koden at variabelen `mål` er `matsvinn/2` som vil seie at det handlar om å halvera matsvinnet. Ser me på løkka i rad 7-9 vert det lagt til eitt år for kvar gong me køyrer gjennom løkka, og me køyrer gjennom løkka så lenge `matsvinn` er større enn `mål`. Variablene `vf=0,87` fortel oss at det er ein reduksjon på $13 \%$ kvart år (fordi $1 - 0,87 = 0,13$).
+
+Sidan matsvinnet er $160 kg$ i starten og `år=2025`, kan me gå ut frå at ho vil finna ut i kva år matsvinnet er halvert frå $160 kg$ til $80 kg$ når me reduserer med $13 \%$ kvart år.
+
+På outputen ser me at i år 2030 er matsvinnet halvert til under $80 kg$.
+
+# Del 2 - med hjelpemiddel
+
