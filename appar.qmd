@@ -1,0 +1,85 @@
+---
+title: "Appar"
+description: "Små verktøy eg har laga til timane. Dei køyrer rett i nettlesaren og samlar ikkje inn data."
+title-block-banner: true
+comments: false
+body-classes: lo-utan-ark
+---
+
+<!--
+Legg til ein app: kopier ein <a class="lo-app">-blokk og endra href, tittel, tekst og adresse.
+Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk ligg.
+-->
+
+## Matematikk
+
+```{=html}
+<div class="lo-appar t-stat">
+  <a class="lo-app" href="/forteiknslinjer.html">
+    <span class="lo-app-tittel">Forteiknsskjema</span>
+    <span class="lo-app-tekst">Lag forteiknslinjer for faktoriserte uttrykk og brøkar.</span>
+    <span class="lo-app-adresse">lektorodd.no/forteiknslinjer.html</span>
+  </a>
+  <a class="lo-app" href="/brok.html">
+    <span class="lo-app-tittel">Brøk-meister</span>
+    <span class="lo-app-tekst">Kjapp trening i brøkrekning.</span>
+    <span class="lo-app-adresse">lektorodd.no/brok.html</span>
+  </a>
+  <a class="lo-app" href="/store_tall.html">
+    <span class="lo-app-tittel">Store tals lov</span>
+    <span class="lo-app-tekst">Simuler myntkast og terningkast og sjå den relative frekvensen stabilisere seg.</span>
+    <span class="lo-app-adresse">lektorodd.no/store_tall.html</span>
+  </a>
+  <a class="lo-app" href="/derivasjon/">
+    <span class="lo-app-tittel">Derivasjonstrening</span>
+    <span class="lo-app-tekst">Øv på derivasjonsreglane med oppgåver som tilpassar seg nivået ditt.</span>
+    <span class="lo-app-adresse">lektorodd.no/derivasjon/</span>
+  </a>
+  <a class="lo-app" href="/kjerneregel.html">
+    <span class="lo-app-tittel">Kjerneregelen</span>
+    <span class="lo-app-tekst">Sjå korleis kjerneregelen verkar, steg for steg.</span>
+    <span class="lo-app-adresse">lektorodd.no/kjerneregel.html</span>
+  </a>
+  <a class="lo-app" href="/s2-fagkart.html">
+    <span class="lo-app-tittel">Fagkart S2</span>
+    <span class="lo-app-tekst">Emna i S2 og korleis dei heng saman.</span>
+    <span class="lo-app-adresse">lektorodd.no/s2-fagkart.html</span>
+  </a>
+</div>
+```
+
+## Geofag
+
+```{=html}
+<div class="lo-appar t-kart">
+  <a class="lo-app" href="/geotid.html">
+    <span class="lo-app-tittel">Tidsreisa</span>
+    <span class="lo-app-tekst">Plasser hendingar på den geologiske tidslinja.</span>
+    <span class="lo-app-adresse">lektorodd.no/geotid.html</span>
+  </a>
+  <a class="lo-app" href="/geofag-standpunkt/">
+    <span class="lo-app-tittel">Kjenneteikn på standpunkt</span>
+    <span class="lo-app-tekst">Kjenneteikn på måloppnåing i geofag.</span>
+    <span class="lo-app-adresse">lektorodd.no/geofag-standpunkt/</span>
+  </a>
+</div>
+```
+
+## I timen
+
+```{=html}
+<div class="lo-appar t-kode">
+  <a class="lo-app" href="/terning.html">
+    <span class="lo-app-tittel">Terningtrillar</span>
+    <span class="lo-app-tekst">Trill terningar på tavla når de treng tilfeldige tal.</span>
+    <span class="lo-app-adresse">lektorodd.no/terning.html</span>
+  </a>
+  <a class="lo-app" href="/grupper.html">
+    <span class="lo-app-tittel">Gruppegenerator</span>
+    <span class="lo-app-tekst">Lag tilfeldige grupper frå ei namneliste eller frå Visma InSchool.</span>
+    <span class="lo-app-adresse">lektorodd.no/grupper.html</span>
+  </a>
+</div>
+```
+
+Kjeldekoden ligg på [GitHub](https://github.com/lektorodd).

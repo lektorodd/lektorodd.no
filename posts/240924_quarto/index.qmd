@@ -12,7 +12,7 @@ I mange av faga eg underviser har eg på eit eller anna vis inkludert programmer
 
 Ofte er det litt tungvint å distribuera og visa fram desse filene. Med [Quarto](https://quarto.org) kan ein gjera om slike filer til mange andre format. Alt frå word-filer til [presentasjonar](/vedlegg/slides/vassforing.html), bloggar og [bøker](https://lektorodd.github.io/mattebok/). 
 
-Heile [bloggen min](https://lektorodd.github.io/) og dei aller fleste [eksamensløysingsforslaga](https://lektorodd.github.io/lf.html) er laga med Quarto. Det meste er skrive i Jupyter-notatblokker, med nokre unntak. Meir om det seinare. 
+Heile [bloggen min](https://lektorodd.no/) og dei aller fleste [eksamensløysingsforslaga](https://lektorodd.no/lf.html) er laga med Quarto. Det meste er skrive i Jupyter-notatblokker, med nokre unntak. Meir om det seinare. 
 
 ## Korleis fungerer det?
 

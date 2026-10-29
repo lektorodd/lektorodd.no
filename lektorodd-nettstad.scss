@@ -1,0 +1,231 @@
+/*-- scss:rules --*/
+// ============================================================
+//  Lektorodd - reglar berre for lektorodd.no
+//  Ligg oppa theme-lektorodd.scss og theme-lektorodd-dark.scss.
+//  Brukar CSS-variablane --lo-*, sa same regel verkar i lys og mork.
+// ============================================================
+
+// ---- Kategoriar i listene (blogg, lf) ----------------------
+.quarto-listing-category .category,
+.listing-categories .listing-category,
+.quarto-grid-item .listing-categories .listing-category {
+  display: inline-block;
+  background: var(--lo-surface);
+  color: var(--lo-ink);
+  border: 1px solid var(--lo-border-strong);
+  border-radius: 999px;
+  padding: .1em .7em;
+  font-size: .78rem;
+  font-weight: 600;
+  opacity: 1;
+  text-transform: none;
+}
+.quarto-listing-category .category.active,
+.quarto-listing-category .category:hover {
+  border-color: var(--lo-blue);
+  color: var(--lo-blue);
+}
+
+.quarto-grid-item .card-title,
+.quarto-post .listing-title {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.listing-date, .listing-reading-time {
+  font-family: $font-family-monospace;
+  font-size: .8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+// ---- Framside ----------------------------------------------
+.lo-framside {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3.5rem 0 4rem;
+}
+
+.lo-hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+  margin: 0 0 1.2rem;
+  border: none;
+}
+.lo-hero .lo-ingress {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  color: var(--lo-ink);
+  max-width: 34em;
+  margin: 0;
+}
+
+.lo-vegar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3rem 0 3.5rem;
+}
+.lo-veg {
+  display: block;
+  background: var(--lo-surface);
+  border: 1px solid var(--lo-border);
+  border-top: 4px solid var(--lo-accent, var(--lo-blue));
+  border-radius: 5px;
+  padding: 1.1rem 1.2rem 1.25rem;
+  color: var(--lo-ink);
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(2,6,23,.05);
+  transition: border-color .15s, transform .15s;
+}
+.lo-veg:hover,
+.lo-veg:focus-visible {
+  border-color: var(--lo-accent, var(--lo-blue));
+  color: var(--lo-ink);
+  transform: translateY(-2px);
+}
+.lo-veg:focus-visible { outline: 2px solid var(--lo-blue); outline-offset: 3px; }
+.lo-veg-tittel {
+  display: block;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  color: var(--lo-ink-strong);
+  margin-bottom: .35rem;
+}
+.lo-veg-tittel::after {
+  content: " \2192";
+  color: var(--lo-accent, var(--lo-blue));
+}
+.lo-veg-tekst {
+  display: block;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: var(--lo-muted);
+}
+
+.lo-siste {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+.lo-siste h2 {
+  font-size: 1.15rem;
+  margin: 0 0 .6rem;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--lo-border-strong);
+}
+.lo-siste .quarto-listing { padding-top: 0; }
+.lo-liste { list-style: none; padding: 0; margin: 0; }
+.lo-liste li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--lo-border);
+}
+.lo-liste time {
+  flex: 0 0 auto;
+  font-family: $font-family-monospace;
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--lo-muted);
+  min-width: 5.5em;
+}
+.lo-liste a { color: var(--lo-ink-strong); font-weight: 600; }
+.lo-liste a:hover { color: var(--lo-link); }
+.lo-meir { margin: .8rem 0 0; font-size: .95rem; }
+
+@media (max-width: 760px) {
+  .lo-framside { padding-top: 2rem; }
+  .lo-vegar { grid-template-columns: 1fr; margin: 2rem 0 2.5rem; }
+  .lo-siste { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+// ---- Appar -------------------------------------------------
+.lo-appar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2.5rem;
+}
+.lo-app {
+  display: block;
+  background: var(--lo-surface);
+  border: 1px solid var(--lo-border);
+  border-left: 4px solid var(--lo-accent, var(--lo-blue));
+  border-radius: 5px;
+  padding: .9rem 1rem 1rem;
+  color: var(--lo-ink);
+  text-decoration: none;
+  transition: border-color .15s;
+}
+.lo-app:hover, .lo-app:focus-visible {
+  border-color: var(--lo-accent, var(--lo-blue));
+  color: var(--lo-ink);
+}
+.lo-app:focus-visible { outline: 2px solid var(--lo-blue); outline-offset: 3px; }
+.lo-app-tittel {
+  display: block;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--lo-ink-strong);
+  margin-bottom: .25rem;
+}
+.lo-app-tekst {
+  display: block;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--lo-muted);
+}
+.lo-app-adresse {
+  display: block;
+  margin-top: .6rem;
+  font-family: $font-family-monospace;
+  font-size: .75rem;
+  color: var(--lo-muted);
+  overflow-wrap: anywhere;
+}
+
+// ---- 404 ---------------------------------------------------
+.lo-404 {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.lo-404 .lo-404-kode {
+  font-family: $font-family-monospace;
+  color: var(--lo-muted);
+  margin: 0 0 .5rem;
+}
+
+// Sider med eigen h1 i innhaldet (framside, 404)
+.lo-utan-tittel #title-block-header { display: none; }
+
+// ---- Lesesider: tekst pa eit ark, ikkje rett pa rutene ------
+//  Gjeld innlegg, losingsforslag og Om meg. Sider med full breidd
+//  (framside, lister) og app-sida beheld rutepapiret heilt fram.
+body:not(.fullcontent):not(.lo-utan-ark) main.content {
+  background: var(--lo-surface);
+  border: 1px solid var(--lo-border);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(2,6,23,.05);
+  padding: 2rem 2.5rem 2.5rem;
+}
+@media (max-width: 767.98px) {
+  body:not(.fullcontent):not(.lo-utan-ark) main.content {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+}
+
+// ---- Kodeblokk: berre ytste boks far kant -------------------
+div.sourceCode > pre.sourceCode {
+  border: none;
+  background: transparent;
+}
+div.sourceCode > pre.sourceCode.numberSource {
+  border-left: 1px solid var(--lo-border);
+}

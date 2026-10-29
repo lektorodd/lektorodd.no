@@ -1,0 +1,21 @@
+---
+title: "Fann ikkje sida"
+body-classes: lo-utan-tittel
+page-layout: full
+comments: false
+---
+
+```{=html}
+<div class="lo-404">
+  <p class="lo-404-kode">404</p>
+  <h1>Sida er <span class="mark">flytta</span> eller borte</h1>
+  <p>Det du leitar etter kan ha fått ny adresse då nettsida vart rydda.</p>
+  <ul>
+    <li><a href="/index.html">Framsida</a></li>
+    <li><a href="/lf.html">Løysingsforslag</a></li>
+    <li><a href="/appar.html">Appar</a></li>
+    <li><a href="/blogg.html">Blogg</a></li>
+  </ul>
+  <p>Finn du det ikkje, send meg ein <a href="mailto:post@lektorodd.no">e-post</a>.</p>
+</div>
+```
