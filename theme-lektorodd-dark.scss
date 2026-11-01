@@ -1,0 +1,188 @@
+/*-- scss:defaults --*/
+// ============================================================
+//  Lektorodd - Quarto HTML theme - MORK (tavle)
+//  Retning A - "Trio kald"
+//  Parsystem til theme-lektorodd.scss for ekte lys/mork-veksling:
+//    theme:
+//      light: [cosmo, quarto/theme-lektorodd.scss]
+//      dark:  [cosmo, quarto/theme-lektorodd-dark.scss]
+// ============================================================
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400%3B500%3B600%3B700&family=Source+Sans+3:ital,wght@0,300..700%3B1,300..700&family=JetBrains+Mono:wght@400..700&display=swap');
+
+// ---- Brand palette (mork) ----------------------------------
+$lo-tavle:        #15202B;   // botn
+$lo-surface:      #1C2A38;   // kort / kodefelt
+$lo-subtle:       #243341;   // svak fyllfarge
+$lo-border:       #2E3E4D;   // tynn kant
+$lo-border-strong: #3C4E5F;
+
+$lo-on-dark:      #F7F5EF;   // brodtekst
+$lo-heading:      #FFFFFF;   // titlar
+$lo-muted:        #A9B4C0;
+
+// aksentar - litt lysare enn lys-temaet for kontrast pa mork botn
+$lo-blue:         #6BA6E0;   // tema 01
+$lo-blue-dark:    #9CC4ED;
+$lo-green:        #6FC79A;   // tema 02
+$lo-violet:       #B79BEC;   // tema 03
+$lo-red:          #F08A8A;
+
+$lo-mint:         #98D3B4;   // kald signatur-highlight (uendra)
+$lo-mint-soft:    #9FD8BD;
+$lo-mint-deep:    #86C9A6;
+
+// ---- Bootstrap / Quarto variables --------------------------
+$body-bg:            $lo-tavle;
+$body-color:         $lo-on-dark;
+$font-family-sans-serif: "Source Sans 3", system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Space Grotesk", "Source Sans 3", sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+$font-size-root:     18px;
+$headings-font-weight: 600;
+$headings-color:     $lo-heading;
+$headings-line-height: 1.08;
+$h1-font-size:       2.6rem;
+$h2-font-size:       1.9rem;
+$h3-font-size:       1.4rem;
+
+$link-color:         $lo-mint;
+$link-hover-color:   #B6E2CB;
+$link-decoration:    none;
+
+$border-radius:      4px;
+$border-radius-sm:   3px;
+$border-radius-lg:   6px;
+
+$code-color:         $lo-mint;
+$code-bg:            $lo-subtle;
+$code-block-bg:      $lo-surface;
+
+$navbar-bg:          $lo-tavle;
+$navbar-fg:          $lo-on-dark;
+$navbar-hl:          $lo-mint;
+$sidebar-bg:         $lo-tavle;
+$sidebar-fg:         $lo-on-dark;
+
+$callout-color-note:      $lo-blue;
+$callout-color-tip:       $lo-green;
+$callout-color-important: $lo-violet;
+$callout-color-warning:   #E0B760;
+$callout-color-caution:   $lo-red;
+
+/*-- scss:rules --*/
+// ============================================================
+
+// ---- Tokenar som CSS-variablar (same namn som i lys modus) ---
+:root {
+  --lo-cream: #{$lo-tavle}; --lo-surface: #{$lo-surface}; --lo-subtle: #{$lo-subtle};
+  --lo-border: #{$lo-border}; --lo-border-strong: #{$lo-border-strong};
+  --lo-ink: #{$lo-on-dark}; --lo-ink-strong: #{$lo-heading}; --lo-muted: #{$lo-muted};
+  --lo-blue: #{$lo-blue}; --lo-blue-dark: #{$lo-blue-dark};
+  --lo-green: #{$lo-green}; --lo-violet: #{$lo-violet}; --lo-red: #{$lo-red};
+  --lo-mint: #{$lo-mint}; --lo-tavle: #0E1720; --lo-on-dark: #{$lo-on-dark};
+  --lo-link: #{$lo-mint};
+}
+
+// ---- Tavle-rutenett i bakgrunnen ---------------------------
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  background-attachment: fixed;
+}
+p { text-wrap: pretty; }
+
+h1, h2, h3, .quarto-title h1.title { letter-spacing: -0.02em; }
+h1, .quarto-title h1.title { letter-spacing: -0.03em; }
+
+// ---- Signatur: mint marker (mork tekst inni) --------------
+mark, .mark {
+  background: linear-gradient(100deg,
+      rgba(152,211,180,0) 1%, #{$lo-mint-soft} 5%,
+      #{$lo-mint-deep} 95%, rgba(152,211,180,0) 99%);
+  padding: 0 .28em; color: $lo-tavle; border-radius: 1px;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.u { box-shadow: inset 0 -0.22em 0 $lo-mint; }
+
+// ---- Tema-fargar som rullerer ------------------------------
+.t-stat { --lo-accent: #{$lo-blue};   }
+.t-kart { --lo-accent: #{$lo-green};  }
+.t-kode { --lo-accent: #{$lo-violet}; }
+.t-stat a, .t-kart a, .t-kode a { color: var(--lo-accent); }
+
+.accent-blue   { color: $lo-blue;   }
+.accent-green  { color: $lo-green;  }
+.accent-violet { color: $lo-violet; }
+.dot { display:inline-block; width: .55em; height: .55em; border-radius: 50%; vertical-align:middle; margin-right: .4em; }
+.dot.blue{background: $lo-blue;} .dot.green{background: $lo-green;} .dot.violet{background: $lo-violet;}
+
+// ---- Buttons -----------------------------------------------
+.btn-primary {
+  --bs-btn-bg: #{$lo-blue};
+  --bs-btn-border-color: #{$lo-blue};
+  --bs-btn-hover-bg: #{$lo-blue-dark};
+  --bs-btn-hover-border-color: #{$lo-blue-dark};
+  --bs-btn-color: #{$lo-tavle};
+  font-weight: 600;
+}
+.btn-outline-primary {
+  --bs-btn-color: #{$lo-on-dark};
+  --bs-btn-border-color: #{$lo-border-strong};
+  --bs-btn-hover-bg: #{$lo-subtle};
+  --bs-btn-hover-color: #{$lo-on-dark};
+  --bs-btn-hover-border-color: #{$lo-border-strong};
+  font-weight: 600;
+}
+
+// ---- Navbar ------------------------------------------------
+.navbar { border-bottom: 1px solid $lo-border; }
+.navbar-brand {
+  font-family: $headings-font-family; font-weight: 600;
+  letter-spacing: -0.01em; font-size: 1.3rem; color: $lo-on-dark;
+}
+.navbar .nav-link.active, .navbar .nav-link:hover { color: $lo-mint !important; }
+
+// ---- Cards / listing ---------------------------------------
+.card, .quarto-grid-item {
+  background: $lo-surface;
+  border: 1px solid $lo-border;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.quarto-title-block .quarto-categories .quarto-category {
+  background: $lo-blue; color: $lo-tavle; border: none;
+  border-radius: 999px; font-size: .72rem; font-weight: 600;
+  text-transform: none; opacity: 1; padding: .2em .8em;
+}
+
+// ---- Code --------------------------------------------------
+pre.sourceCode, div.sourceCode {
+  border: 1px solid $lo-border; border-left: 3px solid $lo-mint;
+  border-radius: 5px; background: $lo-surface;
+}
+code:not(.sourceCode) {
+  background: $lo-subtle; color: $lo-mint;
+  padding: .12em .4em; border-radius: 3px; font-size: .88em;
+}
+
+// ---- Callouts / quote --------------------------------------
+.callout { border-radius: 5px; border-left-width: 4px; background: $lo-surface; }
+.callout.callout-style-default .callout-title { font-weight: 600; }
+blockquote { border-left: 3px solid $lo-mint; color: $lo-muted; font-style: normal; }
+
+// ---- Title banner ------------------------------------------
+.quarto-title-banner { background: $lo-tavle; border-bottom: 1px solid $lo-border; }
+
+// ---- Tables ------------------------------------------------
+.table { --bs-table-bg: transparent; --bs-table-color: #{$lo-on-dark}; }
+.table > :not(caption) > * > * { border-bottom-color: $lo-border; }
+thead th { border-bottom: 2px solid $lo-mint !important; font-family: $headings-font-family; }
+
+// ---- Selection --------------------------------------------
+::selection { background: $lo-mint; color: $lo-tavle; }

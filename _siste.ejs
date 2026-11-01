@@ -1,0 +1,10 @@
+```{=html}
+<ul class="list lo-liste">
+<% for (const item of items) { %>
+  <li <%= metadataAttrs(item) %>>
+    <time class="listing-date"><%= item.date %></time>
+    <a href="<%- item.path %>"><%= item.title %></a>
+  </li>
+<% } %>
+</ul>
+```

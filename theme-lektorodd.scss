@@ -1,0 +1,254 @@
+/*-- scss:defaults --*/
+// ============================================================
+//  Lektorodd - Quarto HTML theme  (website + book)
+//  Retning A - "Trio kald"
+//  Space Grotesk display - Source Sans 3 body - JetBrains Mono code
+//  Varm krembotn - mint highlight - bla/gron/violett rullerer
+//  Bruk:  format: html -> theme: [cosmo, theme-lektorodd.scss]
+// ============================================================
+
+// ---- Fonts (Google) ----------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400%3B500%3B600%3B700&family=Source+Sans+3:ital,wght@0,300..700%3B1,300..700&family=JetBrains+Mono:wght@400..700&display=swap');
+
+// ---- Brand palette -----------------------------------------
+$lo-cream:        #F6F1E6;   // papir / botn
+$lo-surface:      #FCFAF4;   // kort / kodefelt
+$lo-subtle:       #EFE9DC;   // svak fyllfarge
+$lo-border:       #E8E1D2;   // tynn kant
+$lo-border-strong: #D8D2C4;
+
+$lo-ink:          #1F2933;   // brodtekst
+$lo-ink-strong:   #15202B;   // titlar / tavle
+$lo-muted:        #6B6F77;
+
+$lo-blue:         #2B6CB0;   // tema 01
+$lo-blue-dark:    #1E4B7B;
+$lo-green:        #276749;   // tema 02
+$lo-violet:       #805AD5;   // tema 03
+$lo-red:          #C53030;
+
+$lo-mint:         #98D3B4;   // kald signatur-highlight
+$lo-mint-soft:    #9FD8BD;
+$lo-mint-deep:    #86C9A6;
+
+$lo-tavle:        #15202B;   // mork botn
+$lo-on-dark:      #F7F5EF;
+$lo-muted-dark:   #A9B4C0;
+
+// ---- Bootstrap / Quarto variables --------------------------
+$body-bg:            $lo-cream;
+$body-color:         $lo-ink;
+$font-family-sans-serif: "Source Sans 3", system-ui, -apple-system, sans-serif;
+$headings-font-family:   "Space Grotesk", "Source Sans 3", sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+$font-size-root:     18px;
+$headings-font-weight: 600;
+$headings-color:     $lo-ink-strong;
+$headings-line-height: 1.08;
+$h1-font-size:       2.6rem;
+$h2-font-size:       1.9rem;
+$h3-font-size:       1.4rem;
+
+$link-color:         $lo-blue;
+$link-hover-color:   $lo-blue-dark;
+$link-decoration:    none;
+
+$border-radius:      4px;
+$border-radius-sm:   3px;
+$border-radius-lg:   6px;
+
+// Code
+$code-color:         $lo-blue-dark;
+$code-bg:            $lo-subtle;
+$code-block-bg:      $lo-surface;
+$code-block-border-left: $lo-mint;
+
+// Navbar / sidebar (website + book)
+$navbar-bg:          $lo-surface;
+$navbar-fg:          $lo-ink;
+$navbar-hl:          $lo-blue;
+$sidebar-bg:         $lo-cream;
+$sidebar-fg:         $lo-ink;
+
+// Callout accent colours (map to brand)
+$callout-color-note:      $lo-blue;
+$callout-color-tip:       $lo-green;
+$callout-color-important: $lo-violet;
+$callout-color-warning:   #B7791F;
+$callout-color-caution:   $lo-red;
+
+/*-- scss:rules --*/
+// ============================================================
+
+// ---- Tokenar som CSS-variablar (same namn som i appane) ------
+:root {
+  --lo-cream: #{$lo-cream}; --lo-surface: #{$lo-surface}; --lo-subtle: #{$lo-subtle};
+  --lo-border: #{$lo-border}; --lo-border-strong: #{$lo-border-strong};
+  --lo-ink: #{$lo-ink}; --lo-ink-strong: #{$lo-ink-strong}; --lo-muted: #{$lo-muted};
+  --lo-blue: #{$lo-blue}; --lo-blue-dark: #{$lo-blue-dark};
+  --lo-green: #{$lo-green}; --lo-violet: #{$lo-violet}; --lo-red: #{$lo-red};
+  --lo-mint: #{$lo-mint}; --lo-tavle: #{$lo-tavle}; --lo-on-dark: #{$lo-on-dark};
+  --lo-link: #{$lo-blue};
+}
+
+// ---- Headings: tighten tracking like the mockups ----------
+h1, h2, h3, .quarto-title h1.title {
+  letter-spacing: -0.02em;
+}
+h1, .quarto-title h1.title { letter-spacing: -0.03em; }
+
+// ---- Body rhythm -------------------------------------------
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  // subtilt rutenett pa krembotnen (same grep som tavle-varianten, men lyst)
+  background-image:
+    linear-gradient(rgba(31,41,51,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31,41,51,.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+  background-attachment: fixed;
+}
+p { text-wrap: pretty; }
+
+// ---- THE signature: mint marker highlight ------------------
+//  Use:  This is the [key idea]{.mark}.   -  or <mark>...</mark>
+mark, .mark {
+  background: linear-gradient(100deg,
+      rgba(152,211,180,0) 1%,
+      #{$lo-mint-soft} 5%,
+      #{$lo-mint-deep} 95%,
+      rgba(152,211,180,0) 99%);
+  padding: 0 .28em;
+  color: $lo-ink-strong;
+  border-radius: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+//  Quiet alternative: clean mint underline  ([word]{.u})
+.u {
+  box-shadow: inset 0 -0.22em 0 $lo-mint;
+}
+
+// ---- Tema-fargar som rullerer  (.t-stat / .t-kart / .t-kode)
+//  Set ein pa <body> eller ein seksjon for a bytte aksent.
+.t-stat { --lo-accent: #{$lo-blue};   }
+.t-kart { --lo-accent: #{$lo-green};  }
+.t-kode { --lo-accent: #{$lo-violet}; }
+.t-stat a, .t-kart a, .t-kode a { color: var(--lo-accent); }
+
+// Aksent-hjelparar
+.accent-blue   { color: $lo-blue;   }
+.accent-green  { color: $lo-green;  }
+.accent-violet { color: $lo-violet; }
+.dot { display:inline-block; width: .55em; height: .55em; border-radius: 50%; vertical-align:middle; margin-right: .4em; }
+.dot.blue{background: $lo-blue;} .dot.green{background: $lo-green;} .dot.violet{background: $lo-violet;}
+
+// ---- Buttons -----------------------------------------------
+.btn-primary {
+  --bs-btn-bg: #{$lo-blue};
+  --bs-btn-border-color: #{$lo-blue};
+  --bs-btn-hover-bg: #{$lo-blue-dark};
+  --bs-btn-hover-border-color: #{$lo-blue-dark};
+  --bs-btn-color: #fff;
+  font-weight: 600;
+}
+.btn-outline-primary {
+  --bs-btn-color: #{$lo-ink-strong};
+  --bs-btn-border-color: #{$lo-border-strong};
+  --bs-btn-hover-bg: #{$lo-subtle};
+  --bs-btn-hover-color: #{$lo-ink-strong};
+  --bs-btn-hover-border-color: #{$lo-border-strong};
+  font-weight: 600;
+}
+
+// ---- Navbar ------------------------------------------------
+.navbar {
+  border-bottom: 1px solid $lo-border;
+  font-family: $font-family-sans-serif;
+}
+.navbar-brand {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1.3rem;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover { color: $lo-blue !important; }
+
+// ---- Cards / listing (blogg-oversikt) ----------------------
+.card, .quarto-grid-item {
+  background: $lo-surface;
+  border: 1px solid $lo-border;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(2,6,23,.05);
+}
+.quarto-title-block .quarto-categories .quarto-category {
+  background: $lo-blue;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: none;
+  opacity: 1;
+  padding: .2em .8em;
+}
+
+// ---- Code --------------------------------------------------
+pre.sourceCode, div.sourceCode {
+  border: 1px solid $lo-border;
+  border-left: 3px solid $lo-mint;
+  border-radius: 5px;
+  background: $lo-surface;
+}
+code:not(.sourceCode) {
+  background: $lo-subtle;
+  padding: .12em .4em;
+  border-radius: 3px;
+  font-size: .88em;
+}
+
+// ---- Callouts: low-radius, brand-tinted --------------------
+.callout { border-radius: 5px; border-left-width: 4px; }
+.callout.callout-style-default .callout-title { font-weight: 600; }
+
+// ---- Blockquote --------------------------------------------
+blockquote {
+  border-left: 3px solid $lo-mint;
+  color: $lo-muted;
+  font-style: normal;
+}
+
+// ---- Section / chapter headers on cream --------------------
+.quarto-title-banner {
+  background: $lo-cream;
+  border-bottom: 1px solid $lo-border;
+}
+
+// ---- Tables ------------------------------------------------
+.table { --bs-table-bg: transparent; }
+.table > :not(caption) > * > * { border-bottom-color: $lo-border; }
+thead th { border-bottom: 2px solid $lo-ink-strong !important; font-family: $headings-font-family; }
+
+// ---- Selection --------------------------------------------
+::selection { background: $lo-mint; color: $lo-ink-strong; }
+
+// ============================================================
+//  MORK VARIANT (tavle)
+//  Aktiver med:  <body class="lo-dark">  eller eigen dark theme
+// ============================================================
+body.lo-dark {
+  background: $lo-tavle;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  color: $lo-on-dark;
+}
+body.lo-dark h1, body.lo-dark h2, body.lo-dark h3 { color: $lo-on-dark; }
+body.lo-dark .navbar { background: $lo-tavle; border-color: rgba(255,255,255,.1); }
+body.lo-dark a { color: $lo-mint; }
+body.lo-dark mark, body.lo-dark .mark { color: $lo-tavle; }
+body.lo-dark .card { background: lighten($lo-tavle, 4%); border-color: rgba(255,255,255,.08); }
+body.lo-dark code:not(.sourceCode) { background: rgba(255,255,255,.08); color: $lo-mint; }

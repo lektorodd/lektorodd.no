@@ -4,31 +4,35 @@ project:
     - vedlegg/lf/V24-2PY-loysingsforslag.pdf
     - vedlegg/lf/V24-2P-loysingsforslag.pdf
 
+lang: nn
+date-format: "DD.MM.YYYY"
+
 website:
   title: "Torodd F. Ottestad"
   site-url: https://lektorodd.no
-  description: "Lagring for tankar, utprøvingar og løysingsforslag. Det meste er pythonrelatert i større eller mindre grad."
+  description: "Løysingsforslag til matteeksamen, små appar til timen og tekstar om programmering og KI i skulen."
+  favicon: favicon.svg
   navbar:
+    title: "lektorodd"
     left:
-      - text: "Blogg"
-        href: blogg.qmd
-        icon: lightbulb
       - text: "Løysingsforslag"
         href: lf.qmd
-        icon: calculator
-      - text: "Mattebok"
-        href: https://lektorodd.github.io/mattebok
-        icon: book
+      - text: "Appar"
+        href: appar.qmd
+      - text: "Blogg"
+        href: blogg.qmd
       - text: "Om meg"
         href: about.qmd
-        icon: person
     right:
       - icon: github
-        href: https://github.com/lektorodd/lektorodd.no
+        href: https://github.com/lektorodd
+        aria-label: GitHub
       - icon: youtube
         href: https://www.youtube.com/channel/UCWfDrIj3Mq3Niz77HJ6cTNg
+        aria-label: YouTube
       - icon: rss-fill
-        href: index.xml
+        href: blogg.xml
+        aria-label: RSS-straum for bloggen
   google-analytics:
     tracking-id: "G-4BT5GQPJNJ"
     storage: none
@@ -37,8 +41,9 @@ website:
 format:
   html:
     theme:
-      light: [journal, custom-light.scss]
-      dark: [journal, custom-dark.scss]
+      light: [cosmo, theme-lektorodd.scss, lektorodd-nettstad.scss]
+      dark: [cosmo, theme-lektorodd-dark.scss, lektorodd-nettstad.scss]
+    respect-user-color-scheme: true
     code-line-numbers: true
 
 execute:

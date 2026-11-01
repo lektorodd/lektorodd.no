@@ -1,219 +1,72 @@
 ---
-title: ""
+title: "lektorodd"
+body-classes: lo-utan-tittel
+description: "Løysingsforslag til matteeksamen, små appar til timen og tekstar om programmering og KI i skulen."
+page-layout: full
 comments: false
-page-layout: custom
-title-block-banner: false
+listing:
+  - id: siste-blogg
+    contents: posts
+    sort: "date desc"
+    max-items: 4
+    template: _siste.ejs
+    date-format: "DD.MM.YYYY"
+  - id: siste-lf
+    contents: lf
+    sort: "date desc"
+    max-items: 4
+    template: _siste.ejs
+    date-format: "DD.MM.YYYY"
 ---
 
+::::: {.lo-framside}
+
 ```{=html}
-<style>
-#title-block-header,
-.quarto-title-block,
-.quarto-title,
-h1.title,
-.quarto-title-meta { display: none !important; }
+<header class="lo-hero">
+  <h1>Matte, geofag og <span class="mark">kode</span></h1>
+  <p class="lo-ingress">Eg er Torodd, lektor i vidaregåande. Her legg eg ut løysingsforslag til eksamen, små appar eg har laga til timane, og tekstar om programmering og KI i skulen.</p>
+</header>
 
-#quarto-content,
-#quarto-content > *,
-main.content {
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-body { background: #111827; }
-
-/* ── Hero ──────────────────────────────────────────────── */
-.lo-hero {
-  background: #111827;
-  padding: 56px 32px 80px;
-} 
-
-.lo-hero-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.lo-hero h1 {
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin: 0 0 16px;
-}
-
-.lo-hero h1 em {
-  font-style: italic;
-  font-weight: 700;
-  color: #E7BC73;
-}
-
-.lo-hero p {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 1.05rem;
-  font-weight: 300;
-  color: #CBD2E0;
-  max-width: 480px;
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* ── Cards ─────────────────────────────────────────────── */
-.lo-cards-wrap {
-  background: #F7F8FA;
-}
-
-.quarto-dark .lo-cards-wrap {
-  background: #1a202c;
-}
-
-.lo-cards {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 56px 40px 96px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.lo-card {
-  display: flex;
-  align-items: center;
-  gap: 1.4em;
-  background: #ffffff;
-  border: 1px solid #E5E7EB;
-  border-radius: 6px;
-  padding: 1.4em 1.6em;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 1px 4px rgba(2,6,23,.06);
-  transition: box-shadow .15s, transform .15s;
-}
-
-.lo-card:hover {
-  box-shadow: 0 4px 16px rgba(2,6,23,.1);
-  transform: translateY(-1px);
-  text-decoration: none;
-  color: inherit;
-}
-
-.quarto-dark .lo-card {
-  background: #1F2933;
-  border-color: rgba(255,255,255,.07);
-}
-
-.lo-card-icon {
-  width: 56px;
-  height: 56px;
-  background: #DEEAF7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.quarto-dark .lo-card-icon { background: rgba(43,108,176,.2); }
-
-.lo-card-icon i { color: #2B6CB0; font-size: 1.5rem; }
-.quarto-dark .lo-card-icon i { color: #9CBEE3; }
-
-.lo-card-body { flex: 1; }
-
-.lo-card-title {
-  font-family: 'Crimson Pro', Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1.2;
-  margin: 0 0 4px;
-}
-
-.quarto-dark .lo-card-title { color: #E5E7EB; }
-
-.lo-card-desc {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 0.88rem;
-  font-weight: 300;
-  color: #1F2933;
-  line-height: 1.55;
-  margin: 0;
-}
-
-.quarto-dark .lo-card-desc { color: #CBD2E0; }
-
-.lo-card-arrow {
-  color: #CBD2E0;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-  transition: color .15s, transform .15s;
-}
-
-.lo-card:hover .lo-card-arrow {
-  color: #2B6CB0;
-  transform: translateX(3px);
-}
-
-@media (max-width: 640px) {
-  .lo-hero { padding: 40px 20px 56px; }
-  .lo-hero h1 { font-size: 2rem; }
-  .lo-cards { padding: 32px 16px 64px; gap: 12px; }
-  .lo-card { padding: 1em 1.1em; gap: 1em; }
-  .lo-card-icon { width: 44px; height: 44px; }
-  .lo-card-icon i { font-size: 1.2rem; }
-  .lo-card-title { font-size: 1.15rem; }
-  .lo-card-desc { font-size: 0.82rem; }
-  .lo-card-arrow { display: none; }
-}
-</style>
-
-<div class="lo-hero">
-  <div class="lo-hero-inner">
-    <h1>Tankar, verktøy og <em>ressursar</em></h1>
-    <p>Ei samling av løysingsforslag, blogginnlegg og undervisningsverktøy.</p>
-  </div>
-</div>
-
-<div class="lo-cards-wrap">
-  <div class="lo-cards">
-
-    <a class="lo-card" href="lf.qmd">
-      <div class="lo-card-icon"><i class="bi bi-calculator"></i></div>
-      <div class="lo-card-body">
-        <p class="lo-card-title">Løysingsforslag</p>
-        <p class="lo-card-desc">Løysingsforslag til ulike matematikkeksamenar på vgs.</p>
-      </div>
-      <span class="lo-card-arrow"><i class="bi bi-arrow-right"></i></span>
-    </a>
-
-    <a class="lo-card" href="blogg.qmd">
-      <div class="lo-card-icon"><i class="bi bi-lightbulb"></i></div>
-      <div class="lo-card-body">
-        <p class="lo-card-title">Blogg</p>
-        <p class="lo-card-desc">Tankar, tips og idear om undervisning, programmering og KI.</p>
-      </div>
-      <span class="lo-card-arrow"><i class="bi bi-arrow-right"></i></span>
-    </a>
-
-    <a class="lo-card" href="https://lektorodd.github.io/mattebok" target="_blank" rel="noopener">
-      <div class="lo-card-icon"><i class="bi bi-book"></i></div>
-      <div class="lo-card-body">
-        <p class="lo-card-title">Mattebok</p>
-        <p class="lo-card-desc">Ressursar knytt til programmering i matematikk programfag (S/R) på vgs.</p>
-      </div>
-      <span class="lo-card-arrow"><i class="bi bi-arrow-right"></i></span>
-    </a>
-
-    <a class="lo-card" href="https://kode.lektorodd.no" target="_blank" rel="noopener">
-      <div class="lo-card-icon"><i class="bi bi-grid"></i></div>
-      <div class="lo-card-body">
-        <p class="lo-card-title">Verktøy og appar</p>
-        <p class="lo-card-desc">Små interaktive appar til bruk i undervisninga.</p>
-      </div>
-      <span class="lo-card-arrow"><i class="bi bi-arrow-right"></i></span>
-    </a>
-
-  </div>
-</div>
+<nav class="lo-vegar" aria-label="Innhald">
+  <a class="lo-veg t-stat" href="lf.html">
+    <span class="lo-veg-tittel">Løysingsforslag</span>
+    <span class="lo-veg-tekst">Eksamen i 2P, 2P-Y, S1 og S2, med Python der det passar.</span>
+  </a>
+  <a class="lo-veg t-kode" href="appar.html">
+    <span class="lo-veg-tittel">Appar</span>
+    <span class="lo-veg-tekst">Terning, grupper, forteiknsskjema og andre små verktøy til timen.</span>
+  </a>
+  <a class="lo-veg t-kart" href="blogg.html">
+    <span class="lo-veg-tittel">Blogg</span>
+    <span class="lo-veg-tekst">Tips og erfaringar med KI, programmering og digitale verktøy.</span>
+  </a>
+</nav>
 ```
+
+:::: {.lo-siste}
+
+::: {}
+## Nytt på bloggen
+
+::: {#siste-blogg}
+:::
+
+::: {.lo-meir}
+[Alle innlegg](blogg.qmd)
+:::
+:::
+
+::: {}
+## Nyaste løysingsforslag
+
+::: {#siste-lf}
+:::
+
+::: {.lo-meir}
+[Alle løysingsforslag](lf.qmd)
+:::
+:::
+
+::::
+
+:::::
