@@ -8,9 +8,8 @@ categories: [fagkart, matematikk, S2, læreplan, eigenvurdering, KI]
 image: bilete/blogg-tema.png
 ---
 
-# Fagkart: sjå korleis læreplanen heng saman
 
-Læreplanen er ofte ganske vanskelege for elevar. Og lærarar for den del. Meiningstette kulepunkt med tungvinte formuleringar. Store fag ein skal bruka timevis (ofte 140) på å dykka inn i og forstå. I framand farvatn som dette er det gjerne greitt med eit kart. Det kan gjera navigeringa noko meir overkommeleg. Viss kartet i tillegg vert knytt til forkunnskapar, viser ruter gjennom landskapet, og kan brukast til eigenvurdering! Då nærmar me oss tanken bak Fagkart. Som om ikkje det var nok, er tanken og å laga til lærarlag som kan knyttast til planlegging og t.d. vurdering. I min eigen vurderingsapp (meir om den ein annan dag) er det integrasjon med eit lokalt fagkart, der både elevane og klassen har sine eigne lag. Det første kartet er for matematikk S2, som eg underviser i år. Det finn du på [fagkart.lektorodd.no/s2/](https://fagkart.lektorodd.no/s2/).
+Læreplanen er ofte ganske vanskelege for elevar. Og lærarar for den del. Meiningstette kulepunkt med tungvinte formuleringar. Store fag ein skal bruka timevis (ofte 140) på å dykka inn i og forstå. I framand farvatn som dette er det gjerne greitt med eit kart. Det kan gjera navigeringa noko meir overkommeleg. Viss kartet i tillegg vert knytt til forkunnskapar, viser ruter gjennom landskapet, og kan brukast til eigenvurdering! Då nærmar me oss tanken bak [Fagkart](https://fagkart.lektorodd.no). Som om ikkje det var nok, er tanken og å laga til lærarlag som kan knyttast til planlegging og t.d. vurdering. I min eigen vurderingsapp (meir om den ein annan dag) er det integrasjon med eit lokalt fagkart, der både elevane og klassen har sine eigne lag. Det første kartet er for matematikk S2, som eg underviser i år. Det finn du på [fagkart.lektorodd.no/s2/](https://fagkart.lektorodd.no/s2/).
 
 ![Matematikk S2 i tema-vising: ein boks per tema, med piler som viser kva som byggjer på kva](bilete/blogg-tema.png)
 
