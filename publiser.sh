@@ -21,7 +21,8 @@
 #         security add-generic-password -a "lektorodd.no" -s lektorodd-sftp -w
 #       (du blir spurd om passordet; det blir ikkje ståande i historikken)
 #    3) Sjekk at SFTP_VERT, SFTP_BRUKAR og MAPPE under stemmer med det
-#       one.com viser under SFTP/SSH i kontrollpanelet.
+#       one.com viser under FTP/SFTP i kontrollpanelet. Skriptet brukar
+#       berre SFTP (kryptert). SSH-tilgang trengst ikkje.
 #    4) Køyr ./publiser.sh --prov første gong.
 # ============================================================
 set -euo pipefail
@@ -70,7 +71,9 @@ OPPSETT="set sftp:auto-confirm yes; set net:max-retries 2; set net:timeout 20"
 echo "Sjekkar at $MAPPE på $SFTP_VERT er lektorodd.no ..."
 if ! lftp -c "$OPPSETT; $OPNE; cd $MAPPE; cls -1 index.html lf.html" >/dev/null 2>&1; then
   echo "Fann ikkje index.html og lf.html i $MAPPE på serveren. Avbryt." >&2
-  echo "Sjekk MAPPE (og SFTP_VERT/SFTP_BRUKAR) øvst i skriptet." >&2
+  echo "Dette ligg der du hamnar etter innlogging:" >&2
+  lftp -c "$OPPSETT; $OPNE; cls -1" >&2 || echo "(kom ikkje inn: sjekk SFTP_VERT, SFTP_BRUKAR og passord)" >&2
+  echo "Set MAPPE øvst i skriptet til mappa som har index.html, til dømes MAPPE=/ eller MAPPE=/www." >&2
   exit 1
 fi
 
