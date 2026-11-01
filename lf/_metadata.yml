@@ -14,7 +14,9 @@ toc-location: right
 
 format:
   lektorodd-lf-typst:
-    mainfont: Source Sans Pro
+    # Fontane ligg i utvidinga, så PDF-en ikkje er avhengig av kva som er installert
+    mainfont: Source Sans 3
+    font-paths: ["/_extensions/lektorodd/lektorodd-lf/fonts"]
     codefont: JetBrains Mono
     code-line-numbers: true
     heading-family: Crimson Pro
