@@ -72,10 +72,10 @@ Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk 
     </span>
   </a>
   <a class="lo-app" href="/geofag-standpunkt/">
-    <span class="lo-app-bilete" data-namn="Kjenneteikn på standpunkt"><img src="appar/bilete/geofag-standpunkt.jpg" alt="Kjenneteikn på standpunkt i geofag" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-bilete" data-namn="Kjenneteikn på karakterar"><img src="appar/bilete/geofag-standpunkt.jpg" alt="Kjenneteikn på karakterar i geofag 1, med knappar for nivå 6 til 1" loading="lazy" onerror="this.remove()"></span>
     <span class="lo-app-innhald">
-      <span class="lo-app-tittel">Kjenneteikn på standpunkt</span>
-      <span class="lo-app-tekst">Kjenneteikn på måloppnåing i geofag.</span>
+      <span class="lo-app-tittel">Kjenneteikn på karakterar</span>
+      <span class="lo-app-tekst">Sjå kva som kjenneteiknar kvar karakter i geofag 1, og samanlikn to nivå.</span>
       <span class="lo-app-adresse">lektorodd.no/geofag-standpunkt/</span>
     </span>
   </a>
