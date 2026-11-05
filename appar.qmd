@@ -1,6 +1,6 @@
 ---
 title: "Appar"
-description: "Små verktøy eg har laga til timane. Dei køyrer rett i nettlesaren og samlar ikkje inn data."
+description: "Små verktøy eg har laga til timane. Dei fleste køyrer rett i nettlesaren og samlar ikkje inn data."
 title-block-banner: true
 comments: false
 body-classes: lo-utan-ark
@@ -100,6 +100,14 @@ Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk 
       <span class="lo-app-tittel">Prøvesplitt</span>
       <span class="lo-app-tekst">Lag skiljeark, skann prøvane og få ei PDF-fil med namn til kvar elev. Alt skjer på di eiga maskin.</span>
       <span class="lo-app-adresse">provesplitt.lektorodd.no</span>
+    </span>
+  </a>
+  <a class="lo-app" href="https://github.com/lektorodd/token-prediktor-app">
+    <span class="lo-app-bilete" data-namn="Tokenspå"><img src="appar/bilete/tokenspa.jpg" alt="Tokenspå: skriv ei setning og sjå sannsynet for neste token" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Tokenspå</span>
+      <span class="lo-app-tekst">Sjå kva ein språkmodell trur kjem neste, og korleis temperatur endrar valet. Køyr han lokalt med eigen OpenAI-nøkkel.</span>
+      <span class="lo-app-adresse">github.com/lektorodd/token-prediktor-app</span>
     </span>
   </a>
   <a class="lo-app" href="/grupper.html">
