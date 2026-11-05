@@ -147,26 +147,64 @@
 // ---- Appar -------------------------------------------------
 .lo-appar {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
   margin: 1rem 0 2.5rem;
 }
 .lo-app {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--lo-surface);
   border: 1px solid var(--lo-border);
-  border-left: 4px solid var(--lo-accent, var(--lo-blue));
+  border-top: 4px solid var(--lo-accent, var(--lo-blue));
   border-radius: 5px;
-  padding: .9rem 1rem 1rem;
+  overflow: hidden;
   color: var(--lo-ink);
   text-decoration: none;
-  transition: border-color .15s;
+  box-shadow: 0 1px 3px rgba(2,6,23,.05);
+  transition: border-color .15s, transform .15s;
 }
 .lo-app:hover, .lo-app:focus-visible {
   border-color: var(--lo-accent, var(--lo-blue));
   color: var(--lo-ink);
+  transform: translateY(-2px);
 }
 .lo-app:focus-visible { outline: 2px solid var(--lo-blue); outline-offset: 3px; }
+
+// Biletet: 16:10. Manglar fila, viser flata namnet i staden.
+.lo-app-bilete {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--lo-subtle);
+  border-bottom: 1px solid var(--lo-border);
+}
+.lo-app-bilete::before {
+  content: attr(data-namn);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  color: var(--lo-muted);
+}
+.lo-app-bilete img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.lo-app-innhald {
+  display: block;
+  padding: .85rem 1rem 1rem;
+}
 .lo-app-tittel {
   display: block;
   font-family: $headings-font-family;
