@@ -146,6 +146,16 @@
   )
   show raw.where(block: false): set text(size: 0.9em, fill: lo.ink-strong)
 
+  // Linjenummer på Python-kode (ikkje på utskrifta frå koden), som på nettsida
+  show raw.where(block: true, lang: "python"): it => {
+    show raw.line: l => {
+      box(width: 1.6em, align(right, text(fill: lo.muted, size: 7pt)[#l.number]))
+      h(0.9em)
+      l.body
+    }
+    it
+  }
+
   show link: set text(fill: lo.blue)
 
   // ── Toppband: krem med rutepapir, logo og tittel ────────────
