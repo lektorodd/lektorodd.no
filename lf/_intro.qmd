@@ -1,0 +1,6 @@
+<!-- Felles innleiing for løysingsforslaga. Blir berre vist på nettsida, ikkje i PDF-en. -->
+::: {.content-visible when-format="html"}
+Eg kan ikkje lova at løysinga er feilfri. Gje meg gjerne ein lyd i kommentarfeltet eller [her](/about.qmd) om du ser feil.
+
+Eksamenssettet finn du hos Udir: [Finn eksamensoppgåver](https://sokeresultat.udir.no/eksamensoppgaver.html). Løysingsforslaget kan du òg lasta ned som PDF i menyen til høgre.
+:::

@@ -83,6 +83,8 @@ $callout-color-caution:   $lo-red;
   --lo-green: #{$lo-green}; --lo-violet: #{$lo-violet}; --lo-red: #{$lo-red};
   --lo-mint: #{$lo-mint}; --lo-tavle: #0E1720; --lo-on-dark: #{$lo-on-dark};
   --lo-link: #{$lo-mint};
+  --lo-papir: #{$lo-tavle};
+  --lo-grid: rgba(255,255,255,.05);
 }
 
 // ---- Tavle-rutenett i bakgrunnen ---------------------------
