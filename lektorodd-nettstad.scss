@@ -244,9 +244,9 @@
 .lo-utan-tittel #title-block-header { display: none; }
 
 // ---- Lesesider: tekst pa eit ark, ikkje rett pa rutene ------
-//  Gjeld innlegg, losingsforslag og Om meg. Sider med full breidd
+//  Gjeld innlegg og Om meg. Losingsforslaga har eiga, roleg flate (sja .lo-lf). Sider med full breidd
 //  (framside, lister) og app-sida beheld rutepapiret heilt fram.
-body:not(.fullcontent):not(.lo-utan-ark) main.content {
+body:not(.fullcontent):not(.lo-utan-ark):not(.lo-lf) main.content {
   background: var(--lo-surface);
   border: 1px solid var(--lo-border);
   border-radius: 6px;
@@ -254,7 +254,7 @@ body:not(.fullcontent):not(.lo-utan-ark) main.content {
   padding: 2rem 2.5rem 2.5rem;
 }
 @media (max-width: 767.98px) {
-  body:not(.fullcontent):not(.lo-utan-ark) main.content {
+  body:not(.fullcontent):not(.lo-utan-ark):not(.lo-lf) main.content {
     padding: 1.25rem 1rem 1.5rem;
   }
 }
@@ -266,4 +266,83 @@ div.sourceCode > pre.sourceCode {
 }
 div.sourceCode > pre.sourceCode.numberSource {
   border-left: 1px solid var(--lo-border);
+}
+
+// ---- Losingsforslag: kvit flate, stilen berre i toppbandet ----
+//  body-classes: lo-lf er sett i lf/_metadata.yml.
+body.lo-lf {
+  background-color: var(--lo-papir);
+  background-image: none;
+}
+// Toppbandet: krem (tavle i mork modus) med rutepapir og mint-strek
+.lo-lf .quarto-title-banner {
+  background-color: var(--lo-cream);
+  background-image:
+    linear-gradient(var(--lo-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--lo-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  border-bottom: 3px solid var(--lo-mint);
+}
+.lo-lf .quarto-title-banner .subtitle {
+  color: var(--lo-ink);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: .3rem;
+}
+.lo-lf .quarto-title-banner .subtitle::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  margin-top: 1rem;
+  background: var(--lo-mint);
+}
+.lo-lf .quarto-title-meta-heading {
+  font-family: $font-family-monospace;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+.lo-lf .quarto-title-meta-contents {
+  font-family: $font-family-monospace;
+  font-size: .85rem;
+}
+
+// Delskilje (lf.lua gir «# Del 1 ...» klassen .lf-del)
+.lo-lf h1.lf-del {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem .9rem;
+  margin: 3.2rem 0 1.6rem;
+  padding: 1rem 1.25rem;
+  background: var(--lo-tavle);
+  border-radius: 6px;
+  border: none;
+}
+.lo-lf h1.lf-del .lf-del-nr {
+  font-size: 1.7rem;
+  color: #{$lo-mint};
+  letter-spacing: -0.02em;
+}
+.lo-lf h1.lf-del .lf-del-tekst {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  color: #F7F5EF;
+}
+.lo-lf h1.lf-del .anchorjs-link { color: #F7F5EF !important; }
+
+// Oppgave og deloppgave
+.lo-lf main h2 {
+  margin-top: 2.6rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--lo-border-strong);
+}
+.lo-lf main h3 { margin-top: 1.8rem; }
+.lo-lf main h4 {
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0;
 }

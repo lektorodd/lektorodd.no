@@ -1,0 +1,47 @@
+---
+# Mal for nytt løysingsforslag:
+#   1. Kopier mappa lf/_mal/ til til dømes lf/S1-H26/
+#   2. Fyll inn dei fire linjene under og namnet på PDF-en
+#   3. Skriv. Forfattar, PDF-oppsett og innleiing kjem frå lf/_metadata.yml og lf/_intro.qmd
+title: "H26 // S1"
+subtitle: "Løysingsforslag S1, hausten 2026"
+date: 2026-12-01
+categories: [S1, H26, eksamen]
+format:
+  lektorodd-lf-typst:
+    output-file: S1-H26
+---
+
+{{< include ../_intro.qmd >}}
+
+# Del 1: utan hjelpemiddel
+
+## Oppgåve 1
+
+### a) Kort namn på deloppgåva
+
+Forklaring og utrekning.
+
+$$
+\begin{align*}
+2x + 3 &= 11 \\
+x &= 4
+\end{align*}
+$$
+
+### b) Neste deloppgåve
+
+## Oppgåve 2
+
+# Del 2: med hjelpemiddel
+
+## Oppgåve 1
+
+### a) Med Python
+
+```{python}
+from sympy import symbols, solve
+
+x = symbols("x")
+solve(2*x + 3 - 11, x)
+```
