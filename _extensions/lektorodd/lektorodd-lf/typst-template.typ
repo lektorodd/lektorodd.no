@@ -77,11 +77,22 @@
       #set text(font: codefont, size: 7.5pt, fill: lo.muted)
       #line(length: 100%, stroke: 0.5pt + lo.border-strong)
       #v(3pt)
-      #grid(
-        columns: (1fr, auto),
-        align(left)[#if title != none { title } #h(6pt) lektorodd.no/lf],
-        align(right)[#counter(page).display(pagenumbering, both: true)],
-      )
+      // Side 1 har logoen i toppbandet. Resten av sidene har han nedst til høgre.
+      #let side = counter(page).display(pagenumbering, both: true)
+      #if counter(page).get().first() == 1 {
+        grid(
+          columns: (1fr, auto),
+          align(left + horizon)[#if title != none { title } #h(6pt) lektorodd.no/lf],
+          align(right + horizon, side),
+        )
+      } else {
+        grid(
+          columns: (1fr, auto, 1fr),
+          align(left + horizon)[#if title != none { title } #h(6pt) lektorodd.no/lf],
+          align(center + horizon, side),
+          align(right + horizon, image(lo-logo, format: "svg", height: 9pt)),
+        )
+      }
     ],
   )
 
