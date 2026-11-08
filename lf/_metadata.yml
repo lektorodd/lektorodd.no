@@ -1,23 +1,33 @@
-# options specified here will apply to all posts in this folder
+# Felles oppsett for alle løysingsforslaga i lf/.
+# Kvart løysingsforslag treng difor berre tittel, dato og kategoriar (sjå lf/_mal/).
 freeze: auto
 
-# Enable banner style title blocks
-title-block-banner: true
-
-# Enable CC licence appendix
+author: "Torodd F. Ottestad"
+from: markdown+emoji
 license: "CC BY"
 
-# Default for table of contents
+title-block-banner: true
+body-classes: lo-lf
 toc: true
 toc-title: Innhald
 toc-location: right
 
+# Fjernar den doble «# Løysingsforslag ...»-overskrifta og lagar delskilja
+filters:
+  - ../_extensions/lektorodd/lektorodd-lf/lf.lua
+
 format:
+  html: default
   lektorodd-lf-typst:
     # Fontane ligg i utvidinga, så PDF-en ikkje er avhengig av kva som er installert
-    mainfont: Source Sans 3
     font-paths: ["/_extensions/lektorodd/lektorodd-lf/fonts"]
+    mainfont: Source Sans 3
+    heading-family: Space Grotesk
     codefont: JetBrains Mono
     code-line-numbers: true
-    heading-family: Crimson Pro
-    heading-weight: 700
+    toc: false
+
+format-links:
+  - html
+  - format: lektorodd-lf-typst
+    text: "Last ned som PDF"

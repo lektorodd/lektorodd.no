@@ -1,13 +1,14 @@
 ---
 title: "Appar"
-description: "Små verktøy eg har laga til timane. Dei køyrer rett i nettlesaren og samlar ikkje inn data."
+description: "Små verktøy eg har laga til timane. Dei fleste køyrer rett i nettlesaren og samlar ikkje inn data."
 title-block-banner: true
 comments: false
 body-classes: lo-utan-ark
 ---
 
 <!--
-Legg til ein app: kopier ein <a class="lo-app">-blokk og endra href, tittel, tekst og adresse.
+Legg til ein app: kopier ein <a class="lo-app">-blokk og endra href, bilete, tittel, tekst og adresse.
+Bileta ligg i appar/bilete/ og er 800 x 500 px (16:10). Manglar biletet, viser kortet namnet på ei flate.
 Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk ligg.
 -->
 
@@ -15,35 +16,45 @@ Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk 
 
 ```{=html}
 <div class="lo-appar t-stat">
+  <a class="lo-app" href="https://fagkart.lektorodd.no/s2/">
+    <span class="lo-app-bilete" data-namn="Fagkart"><img src="appar/bilete/fagkart.jpg" alt="Fagkart for S2 med tema som boksar og piler mellom dei" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Fagkart</span>
+      <span class="lo-app-tekst">Sjå korleis S2 heng saman, kva du bør kunne frå før, og marker sjølv kva du kan.</span>
+      <span class="lo-app-adresse">fagkart.lektorodd.no</span>
+    </span>
+  </a>
   <a class="lo-app" href="/forteiknslinjer.html">
-    <span class="lo-app-tittel">Forteiknsskjema</span>
-    <span class="lo-app-tekst">Lag forteiknslinjer for faktoriserte uttrykk og brøkar.</span>
-    <span class="lo-app-adresse">lektorodd.no/forteiknslinjer.html</span>
+    <span class="lo-app-bilete" data-namn="Forteiknsskjema"><img src="appar/bilete/forteiknslinjer.jpg" alt="Forteiknsskjema for (x − 2)(x + 1)" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Forteiknsskjema</span>
+      <span class="lo-app-tekst">Lag forteiknslinjer for faktoriserte uttrykk og brøkar.</span>
+      <span class="lo-app-adresse">lektorodd.no/forteiknslinjer.html</span>
+    </span>
   </a>
   <a class="lo-app" href="/brok.html">
-    <span class="lo-app-tittel">Brøk-meister</span>
-    <span class="lo-app-tekst">Kjapp trening i brøkrekning.</span>
-    <span class="lo-app-adresse">lektorodd.no/brok.html</span>
+    <span class="lo-app-bilete" data-namn="Brøk-meister"><img src="appar/bilete/brok.jpg" alt="Brøk-meister med oppgåva 1/3 + 1/3 og fire svaralternativ" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Brøk-meister</span>
+      <span class="lo-app-tekst">Kjapp trening i brøkrekning, ti oppgåver med aukande vanskegrad.</span>
+      <span class="lo-app-adresse">lektorodd.no/brok.html</span>
+    </span>
   </a>
   <a class="lo-app" href="/store_tall.html">
-    <span class="lo-app-tittel">Store tals lov</span>
-    <span class="lo-app-tekst">Simuler myntkast og terningkast og sjå den relative frekvensen stabilisere seg.</span>
-    <span class="lo-app-adresse">lektorodd.no/store_tall.html</span>
+    <span class="lo-app-bilete" data-namn="Store tals lov"><img src="appar/bilete/store_tall.jpg" alt="Søylediagram over summen av to terningar etter 1000 kast, med den teoretiske fordelinga som linje" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Store tals lov</span>
+      <span class="lo-app-tekst">Simuler myntkast og terningkast og sjå den relative frekvensen stabilisere seg.</span>
+      <span class="lo-app-adresse">lektorodd.no/store_tall.html</span>
+    </span>
   </a>
   <a class="lo-app" href="/derivasjon/">
-    <span class="lo-app-tittel">Derivasjonstrening</span>
-    <span class="lo-app-tekst">Øv på derivasjonsreglane med oppgåver som tilpassar seg nivået ditt.</span>
-    <span class="lo-app-adresse">lektorodd.no/derivasjon/</span>
-  </a>
-  <a class="lo-app" href="/kjerneregel.html">
-    <span class="lo-app-tittel">Kjerneregelen</span>
-    <span class="lo-app-tekst">Sjå korleis kjerneregelen verkar, steg for steg.</span>
-    <span class="lo-app-adresse">lektorodd.no/kjerneregel.html</span>
-  </a>
-  <a class="lo-app" href="/s2-fagkart.html">
-    <span class="lo-app-tittel">Fagkart S2</span>
-    <span class="lo-app-tekst">Emna i S2 og korleis dei heng saman.</span>
-    <span class="lo-app-adresse">lektorodd.no/s2-fagkart.html</span>
+    <span class="lo-app-bilete" data-namn="Derivasjonstrening"><img src="appar/bilete/derivasjon.jpg" alt="Startsida til Ferdighetstrening Derivasjon med Smart Miks og Fokustrening" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Derivasjonstrening</span>
+      <span class="lo-app-tekst">Øv på derivasjonsreglane med oppgåver som tilpassar seg nivået ditt.</span>
+      <span class="lo-app-adresse">lektorodd.no/derivasjon/</span>
+    </span>
   </a>
 </div>
 ```
@@ -53,31 +64,67 @@ Appane ligg på one.com utanfor Quarto, så adressene må peike dit dei faktisk 
 ```{=html}
 <div class="lo-appar t-kart">
   <a class="lo-app" href="/geotid.html">
-    <span class="lo-app-tittel">Tidsreisa</span>
-    <span class="lo-app-tekst">Plasser hendingar på den geologiske tidslinja.</span>
-    <span class="lo-app-adresse">lektorodd.no/geotid.html</span>
+    <span class="lo-app-bilete" data-namn="Tidsreisa"><img src="appar/bilete/geotid.jpg" alt="Tidsreisa: plasser utryddinga av dinosaurane på den geologiske tidslinja" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Tidsreisa</span>
+      <span class="lo-app-tekst">Plasser hendingar på den geologiske tidslinja.</span>
+      <span class="lo-app-adresse">lektorodd.no/geotid.html</span>
+    </span>
   </a>
   <a class="lo-app" href="/geofag-standpunkt/">
-    <span class="lo-app-tittel">Kjenneteikn på standpunkt</span>
-    <span class="lo-app-tekst">Kjenneteikn på måloppnåing i geofag.</span>
-    <span class="lo-app-adresse">lektorodd.no/geofag-standpunkt/</span>
+    <span class="lo-app-bilete" data-namn="Kjenneteikn på karakterar"><img src="appar/bilete/geofag-standpunkt.jpg" alt="Kjenneteikn på karakterar i geofag 1, med knappar for nivå 6 til 1" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Kjenneteikn på karakterar</span>
+      <span class="lo-app-tekst">Sjå kva som kjenneteiknar kvar karakter i geofag 1, og samanlikn to nivå.</span>
+      <span class="lo-app-adresse">lektorodd.no/geofag-standpunkt/</span>
+    </span>
   </a>
 </div>
 ```
 
-## I timen
+## Til læraren
 
 ```{=html}
 <div class="lo-appar t-kode">
-  <a class="lo-app" href="/terning.html">
-    <span class="lo-app-tittel">Terningtrillar</span>
-    <span class="lo-app-tekst">Trill terningar på tavla når de treng tilfeldige tal.</span>
-    <span class="lo-app-adresse">lektorodd.no/terning.html</span>
+  <a class="lo-app" href="https://klassekart.lektorodd.no">
+    <span class="lo-app-bilete" data-namn="Klassekart"><img src="appar/bilete/klassekart.jpg" alt="Ferdig trekt klassekart med firarbord og oppdikta namn" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Klassekart</span>
+      <span class="lo-app-tekst">Trekk klassekart frå ei klasseliste, med sitjereglar og eige romoppsett.</span>
+      <span class="lo-app-adresse">klassekart.lektorodd.no</span>
+    </span>
+  </a>
+  <a class="lo-app" href="https://provesplitt.lektorodd.no">
+    <span class="lo-app-bilete" data-namn="Prøvesplitt"><img src="appar/bilete/provesplitt.jpg" alt="Prøvesplitt: skiljeark med QR-kode og ferdig sorterte PDF-ar per elev" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Prøvesplitt</span>
+      <span class="lo-app-tekst">Lag skiljeark, skann prøvane og få ei PDF-fil med namn til kvar elev. Alt skjer på di eiga maskin.</span>
+      <span class="lo-app-adresse">provesplitt.lektorodd.no</span>
+    </span>
+  </a>
+  <a class="lo-app" href="https://github.com/lektorodd/token-prediktor-app">
+    <span class="lo-app-bilete" data-namn="Tokenspå"><img src="appar/bilete/tokenspa.jpg" alt="Tokenspå: skriv ei setning og sjå sannsynet for neste token" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Tokenspå</span>
+      <span class="lo-app-tekst">Sjå kva ein språkmodell trur kjem neste, og korleis temperatur endrar valet. Køyr han lokalt med eigen OpenAI-nøkkel.</span>
+      <span class="lo-app-adresse">github.com/lektorodd/token-prediktor-app</span>
+    </span>
   </a>
   <a class="lo-app" href="/grupper.html">
-    <span class="lo-app-tittel">Gruppegenerator</span>
-    <span class="lo-app-tekst">Lag tilfeldige grupper frå ei namneliste eller frå Visma InSchool.</span>
-    <span class="lo-app-adresse">lektorodd.no/grupper.html</span>
+    <span class="lo-app-bilete" data-namn="Gruppegenerator"><img src="appar/bilete/grupper.jpg" alt="Fem tilfeldige grupper laga frå ei namneliste" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Gruppegenerator</span>
+      <span class="lo-app-tekst">Lag tilfeldige grupper frå ei namneliste eller frå Visma InSchool.</span>
+      <span class="lo-app-adresse">lektorodd.no/grupper.html</span>
+    </span>
+  </a>
+  <a class="lo-app" href="/terning.html">
+    <span class="lo-app-bilete" data-namn="Terningtrillar"><img src="appar/bilete/terning.jpg" alt="Terningtrillar med fire grupper og fem terningar kvar" loading="lazy" onerror="this.remove()"></span>
+    <span class="lo-app-innhald">
+      <span class="lo-app-tittel">Terningtrillar</span>
+      <span class="lo-app-tekst">Trill terningar på tavla når de treng tilfeldige tal.</span>
+      <span class="lo-app-adresse">lektorodd.no/terning.html</span>
+    </span>
   </a>
 </div>
 ```
